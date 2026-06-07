@@ -4,15 +4,15 @@ I am an Aspiring AI/ML Engineer and Data Scientist focused on building productio
 
 ## 🔭 What I'm Building
 
-Production ML Pipelines: Implementing experiment tracking and data versioning to ensure reproducible research.
-Scalable APIs: Developing high-performance REST APIs using FastAPI for seamless model deployment.
-End-to-End MLOps: Building automated CI/CD workflows using GitHub Actions and Docker to bridge the gap between development and production.
+- Production ML Pipelines: Implementing experiment tracking and data versioning to ensure reproducible research.
+- Scalable APIs: Developing high-performance REST APIs using FastAPI for seamless model deployment.
+- End-to-End MLOps: Building automated CI/CD workflows using GitHub Actions and Docker to bridge the gap between development and production.
 
 ## 🌱 What I'm Learning
 
-Agentic AI: Exploring autonomous AI agents and their integration into complex workflows.
-Generative AI: Implementing Large Language Models (LLMs) for real-world problem-solving.
-Pipeline Reliability: Mastering model monitoring, data drift detection, and automated retraining strategies.
+- Agentic AI: Exploring autonomous AI agents and their integration into complex workflows.
+- Generative AI: Implementing Large Language Models (LLMs) for real-world problem-solving.
+- Pipeline Reliability: Mastering model monitoring, data drift detection, and automated retraining strategies.
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/jaywardhan-yadav/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jaywardhan0310@gmail.com) 

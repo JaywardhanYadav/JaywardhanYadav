@@ -6,18 +6,15 @@
   </picture>
 </div>
 
-
-
 ---
 
 ## ⚡ About Me
 
-I am an **AI Engineer & Multi-Agent Systems Architect** specializing in bridging the gap between cutting-edge LLM research and production-grade software. My focus lies in designing **autonomous agentic workflows (LangGraph / CrewAI)**, **enterprise-grade Retrieval-Augmented Generation (RAG)** systems, and **scalable MLOps inference pipelines**.
-
-- 🔭 **Current Focus:** Building autonomous multi-agent swarms with stateful reasoning, dynamic tool selection, and hybrid vector search architectures.
-- 💡 **Philosophy:** *"Moving AI from exploratory Jupyter notebooks into robust, observable, sub-second latency production systems."*
-- 🎯 **Recent Highlights:** Designed **LegalDrishti AI** (statutory legal RAG with hybrid dense/sparse indexing) and **PlanMyTrip AI** (multi-agent hierarchical travel planning engine).
-- 💬 **Ask Me About:** Agentic orchestration, RAG hallucination reduction, LangGraph state machines, vector databases, and containerized ML APIs.
+- 🤖 **AI & Machine Learning Engineer** dedicated to building robust, scalable, and intelligent production systems.
+- 🧠 **Generative & Agentic AI:** Architecting autonomous multi-agent workflows with LangGraph and high-precision RAG pipelines.
+- 📊 **Core ML & Deep Learning:** Hands-on experience with PyTorch, statistical modeling, NLP, and vector database indexing.
+- ⚙️ **Production MLOps:** Deploying containerized inference APIs and automated pipelines using FastAPI, Docker, and MLflow.
+- 🚀 **Focus:** Moving AI models from experimental notebooks into high-performance, real-world production environments.
 
 ---
 

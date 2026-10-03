@@ -16,25 +16,25 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 ## 🚀 Flagship AI Engineering Projects
 
-### ⚖️ 1. [LegalDrishti AI](https://github.com/JaywardhanYadav) — Enterprise Legal RAG Intelligence System
-> *An advanced Retrieval-Augmented Generation platform built for querying, summarizing, and reasoning over complex Indian statutory codes, case files, and legal documents with precise citation traceability.*
+### ⚖️ 1. [LegalDrishti AI](https://github.com/JaywardhanYadav/LegalDrishti-AI) — Two-Stage RAG Legal Intelligence & Document Research Platform
+> *An enterprise-grade legal intelligence and consultation platform engineered for the Indian legal system (BNS, BNSS, BSA 2023) using a high-precision Two-Stage RAG pipeline backed by OpenAI and Weaviate.*
 
 ```
-┌─────────────────┐     ┌──────────────────┐     ┌────────────────────────┐
-│  Legal Corpus   │ ──> │ Chunking & Meta  │ ──> │ Hybrid Vector Index    │
-│  (Acts / Acts)  │     │ Tagging Engine   │     │ (Dense + Sparse BM25)  │
-└─────────────────┘     └──────────────────┘     └───────────┬────────────┘
-                                                             │
-┌─────────────────┐     ┌──────────────────┐     ┌───────────▼────────────┐
-│ Verified Answer │ <── │ LLM Synthesis &  │ <── │ Cross-Encoder Reranker │
-│  with Citations │     │ Guardrails Check │     │ (Top-k Relevant Chunks)│
-└─────────────────┘     └──────────────────┘     └────────────────────────┘
+┌──────────────────┐     ┌─────────────────────┐     ┌────────────────────────┐
+│  28 Indian Acts  │ ──> │ Recursive Chunking  │ ──> │ Weaviate HNSW Index    │
+│  & Client Vault  │     │ + OpenAI Embeddings │     │ (Hybrid Dense + BM25)  │
+└──────────────────┘     └─────────────────────┘     └───────────┬────────────┘
+                                                                 │
+┌──────────────────┐     ┌─────────────────────┐     ┌───────────▼────────────┐
+│ Verified Legal   │ <── │ Dual-Stream Prompt  │ <── │ Cross-Encoder Reranker │
+│ Strategy & Cites │     │ + GPT-4o Synthesis  │     │ (Top-5 Precision Chunks│
+└──────────────────┘     └─────────────────────┘     └────────────────────────┘
 ```
 
-- **Hybrid Dense-Sparse Search:** Combines dense neural embeddings for semantic intent with sparse BM25 indexing for exact statutory clause and section lookups.
-- **Cross-Encoder Reranking:** Filters initial vector retrieval pools through a high-precision cross-encoder to elevate pinpoint relevance before context injection.
-- **Hallucination Guardrails:** Implements citation enforcement so every generated legal opinion references verifiable paragraphs and case law precedent.
-- **Tech Stack:** `Python` • `FastAPI` • `LangChain` • `Qdrant / Chroma` • `PostgreSQL` • `Docker` • `Streamlit`
+- **Two-Stage Hybrid Retrieval:** Integrates an upstream **Statute Router (Regex + Weighted N-Grams)** with **Weaviate Hybrid Search** ($\alpha=0.5$ dense vectors + BM25) to isolate relevant statutory codes before vector retrieval.
+- **Cross-Encoder Reranking (`FlashRank`):** Filters raw candidate pools (top-20) down to top-5 precision chunks, boosting **MRR@5 from 0.384 to 0.762 (+98.4%)** and achieving **86.8% Hit Rate @ 5** at **~68ms latency**.
+- **Dual-Stream Context Synthesis:** Concurrently contextualizes codified statutes alongside private client evidence in **GPT-4o** with strict citation traceability (Act, Section, Page number).
+- **Tech Stack:** `Python 3.12` • `FastAPI` • `OpenAI GPT-4o / Embeddings` • `Weaviate (HNSW)` • `PostgreSQL 17` • `Docker` • `Streamlit`
 
 ---
 

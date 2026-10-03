@@ -10,11 +10,7 @@
 
 ## ⚡ About Me
 
-- 🤖 **AI & Machine Learning Engineer** dedicated to building robust, scalable, and intelligent production systems.
-- 🧠 **Generative & Agentic AI:** Architecting autonomous multi-agent workflows with LangGraph and high-precision RAG pipelines.
-- 📊 **Core ML & Deep Learning:** Hands-on experience with PyTorch, statistical modeling, NLP, and vector database indexing.
-- ⚙️ **Production MLOps:** Deploying containerized inference APIs and automated pipelines using FastAPI, Docker, and MLflow.
-- 🚀 **Focus:** Moving AI models from experimental notebooks into high-performance, real-world production environments.
+I am an **AI & Machine Learning Engineer** passionate about building robust, scalable, and intelligent production systems. My work centers on architecting autonomous **Multi-Agent workflows (LangGraph & CrewAI)**, developing high-precision **Retrieval-Augmented Generation (RAG)** systems, and training deep learning models with PyTorch. Backed by solid foundations in backend engineering and MLOps, I specialize in translating experimental AI research into high-throughput, containerized microservices deployed with FastAPI, Docker, and MLflow. I am dedicated to bridging the gap between cutting-edge LLMs and reliable, sub-second latency production applications.
 
 ---
 

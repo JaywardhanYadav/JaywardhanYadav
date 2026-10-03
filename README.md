@@ -99,14 +99,14 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 <div align="center">
 
-| Domain / Layer | Core Technologies & Frameworks | Architectures & Methodologies |
-| :--- | :--- | :--- |
-| **🤖 Agentic AI & Swarms** | `LangGraph` • `CrewAI` • `Model Context Protocol (MCP)` • `LangChain` | *Hierarchical Supervisors, Stateful Multi-Turn Graphs, Dynamic Tool Execution, Reflection Loops* |
-| **🔍 Enterprise RAG Systems** | `Weaviate (HNSW)` • `Qdrant` • `ChromaDB` • `PostgreSQL (pgvector)` • `FlashRank` | *Two-Stage RAG, Hybrid Dense-Sparse Retrieval, Cross-Encoder Reranking, Strict Citation Traceability* |
-| **🧠 LLMs & Inference** | `OpenAI GPT-4o` • `Claude 3.7` • `DeepSeek-R1` • `Hugging Face` • `vLLM` • `Ollama` | *Pydantic Structured Outputs, Function Calling, Prompt Optimization, Context Window Management* |
-| **📊 Core ML & Deep Learning** | `Python 3.12` • `PyTorch` • `Scikit-Learn` • `XGBoost` • `LightGBM` • `Optuna` | *Ensemble Regression, Bayesian Hyperparameter Tuning, NLP, Statistical Risk Modeling, Feature Pipelines* |
-| **⚡ Backend & Architecture** | `FastAPI` • `RESTful APIs` • `Pydantic v2` • `Redis` • `PostgreSQL` • `MSSQL` | *AsyncIO Event Loops, Microservices, In-Memory Caching, System Design, High-Throughput Serving* |
-| **⚙️ MLOps & Observability** | `Docker & Docker Compose` • `MLflow` • `Evidently AI` • `DVC & DagsHub` • `CI/CD` • `AWS (EC2, S3)` | *Continuous Data Drift Monitoring, Model Registries, Experiment Versioning, Automated Deployment* |
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Agentic & Generative AI** | `Agentic AI` • `LangGraph` • `LangChain` • `CrewAI` • `RAG (Dense/Sparse)` • `Function Calling` • `Prompt Engineering` |
+| **LLMs & Embedding Models** | `OpenAI GPT-4o` • `Claude 3.7` • `DeepSeek-R1` • `Hugging Face Transformers` • `Sentence-Transformers` • `Ollama` |
+| **Vector Stores & Databases** | `Qdrant` • `Pinecone` • `ChromaDB` • `PostgreSQL (pgvector)` • `Redis` • `SQLite` |
+| **Machine Learning & Core** | `Python` • `PyTorch` • `Scikit-Learn` • `NumPy` • `Pandas` • `NLP` • `Feature Engineering` |
+| **Backend & Architecture** | `FastAPI` • `REST APIs` • `Pydantic` • `System Design` • `AsyncIO` • `Microservices` |
+| **MLOps & Infrastructure** | `Docker` • `AWS (EC2, S3)` • `DVC` • `DagsHub` • `MLflow` • `CI/CD Pipelines` • `Git` • `Linux` |
 
 </div>
 
@@ -116,17 +116,16 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/LangGraph-000000?style=for-the-badge&logo=diagram-next&logoColor=white" alt="LangGraph" />
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" alt="LangChain" />
-  <img src="https://img.shields.io/badge/MCP-000000?style=for-the-badge&logo=anthropic&logoColor=white" alt="MCP" />
+  <img src="https://img.shields.io/badge/Agentic_AI-F59E0B?style=for-the-badge&logo=openai&logoColor=white" alt="Agentic AI" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white" alt="Pydantic" />
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white" alt="MLflow" />
-  <img src="https://img.shields.io/badge/Evidently_AI-5F46E8?style=for-the-badge&logo=datadog&logoColor=white" alt="Evidently AI" />
-  <img src="https://img.shields.io/badge/Weaviate-FF6F00?style=for-the-badge&logo=weaviate&logoColor=white" alt="Weaviate" />
   <img src="https://img.shields.io/badge/Redis-DC2626?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/DVC-945DD6?style=for-the-badge&logo=dvc&logoColor=white" alt="DVC" />
+  <img src="https://img.shields.io/badge/DagsHub-1565C0?style=for-the-badge&logo=dagshub&logoColor=white" alt="DagsHub" />
+  <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white" alt="MLflow" />
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
   <img src="https://img.shields.io/badge/CI%2FCD-06B6D4?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD" />
 </div>

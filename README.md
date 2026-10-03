@@ -38,27 +38,35 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 ---
 
-### 🗺️ 2. [PlanMyTrip AI](https://github.com/JaywardhanYadav) — Autonomous Multi-Agent Travel Planner
-> *A collaborative, state-machine driven multi-agent travel architecture that coordinates real-time research, budget optimization, scheduling, and logistics.*
+### 🗺️ 2. [PlanMyTrip AI](https://github.com/JaywardhanYadav/PlanMyTrip-AI) — Autonomous Multi-Agent Travel Planner & Budget Engine
+> *A collaborative, state-machine driven multi-agent travel architecture leveraging **Model Context Protocol (MCP)** to orchestrate real-time modular APIs, strict budget constraints, and hallucination-free itinerary drafts.*
 
 ```
                      ┌─────────────────────────────┐
                      │   Orchestrator Supervisor   │
-                     │    (Stateful Coordinator)   │
+                     │  (LangGraph State Machine)  │
                      └──────────────┬──────────────┘
                                     │
          ┌──────────────────────────┼──────────────────────────┐
          ▼                          ▼                          ▼
 ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
-│  Weather & Geo   │      │ Budget & Routing │      │ Itinerary & Cult │
-│   Worker Agent   │      │   Worker Agent   │      │   Worker Agent   │
-└──────────────────┘      └──────────────────┘      └──────────────────┘
+│ Itinerary & Cult │      │ Budget & Expense │      │  Logistics & Geo │
+│ Specialist Agent │      │ Calculator Agent │      │ Specialist Agent │
+└────────┬─────────┘      └────────┬─────────┘      └────────┬─────────┘
+         │                         │                         │
+         └─────────────────────────┼─────────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │     Model Context Protocol (MCP) Hub     │
+              │  (Tavily • OpenWeather • Flights/Hotels) │
+              └──────────────────────────────────────────┘
 ```
 
-- **Hierarchical Agent Graph:** Leverages **LangGraph** to model multi-turn state transitions, loop validation, and conditional agent dispatch.
-- **Autonomous Tool Execution:** Agents utilize search APIs, geocoding, and currency converters to fetch ground-truth travel parameters.
-- **Dynamic Constraint Resolution:** Resolves budget-time tradeoffs by autonomously adjusting activities and transit modes.
-- **Tech Stack:** `Python` • `LangGraph` • `LangChain` • `FastAPI` • `Pydantic` • `Tavily Search API` • `Next.js`
+- **Hierarchical LangGraph Orchestration:** Coordinates multi-turn state transitions between specialized worker agents with conditional dispatch, loop validation, and persistent thread memory.
+- **Model Context Protocol (MCP) Server Hub:** Interfaces worker agents with modular, standardized MCP tool servers to query live flight, accommodation, geocoding, and local weather APIs without context clutter.
+- **Deterministic Budget & Cost Optimization:** Calculates exact total travel expenses across accommodation, transit, and daily allowances, enforcing hard mathematical ceiling constraints to eliminate financial hallucinations.
+- **End-to-End Itinerary Synthesis:** Produces a comprehensive, actionable travel dossier complete with hour-by-hour schedules, verified transit times, and localized recommendations.
+- **Tech Stack:** `Python 3.12` • `LangGraph` • `Model Context Protocol (MCP)` • `FastAPI` • `Pydantic v2` • `LangChain` • `Tavily API` • `Docker`
 
 ---
 

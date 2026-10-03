@@ -132,27 +132,6 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 ---
 
-## 📈 Engineering Activity & Metrics
-
-<div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img height="175em" src="https://github-readme-stats.vercel.app/api?username=JaywardhanYadav&show_icons=true&theme=tokyonight&hide_border=true&bg_color=030712&title_color=22D3EE&icon_color=7C3AED&text_color=94A3B8" alt="Jaywardhan's GitHub Stats" />
-      </td>
-      <td>
-        <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JaywardhanYadav&layout=compact&theme=tokyonight&hide_border=true&bg_color=030712&title_color=22D3EE&text_color=94A3B8" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-
-  <br/>
-
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=JaywardhanYadav&theme=tokyonight&hide_border=true&background=030712&ring=22D3EE&fire=7C3AED&currStreakLabel=22D3EE" alt="GitHub Streak" width="85%" />
-</div>
-
----
-
 ## 🌐 Connect & Collaborate
 
 I am actively open to **AI/ML Engineering roles**, **GenAI / Multi-Agent consulting**, and **innovative open-source collaborations**.

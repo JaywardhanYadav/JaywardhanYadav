@@ -6,13 +6,7 @@
   </picture>
 </div>
 
-<p align="center">
-  <a href="https://github.com/JaywardhanYadav"><img src="https://img.shields.io/badge/GitHub-JaywardhanYadav-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://www.linkedin.com/in/jaywardhanyadav/"><img src="https://img.shields.io/badge/LinkedIn-Jaywardhan_Yadav-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://jaywardhanportfolio.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-Live_Website-06B6D4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:jaywardhan.tech@gmail.com"><img src="https://img.shields.io/badge/Email-jaywardhan.tech@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <img src="https://img.shields.io/badge/Focus-Agentic_AI_%26_RAG-7C3AED?style=for-the-badge&logo=openai&logoColor=white" alt="Current Focus" />
-</p>
+
 
 ---
 

@@ -70,22 +70,28 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 ---
 
-### 🤖 3. [Customer Support AI](https://github.com/JaywardhanYadav) — Agentic RAG with Dynamic Tool Calling
-> *Context-aware autonomous agent equipped with persistent conversational memory buffers, enterprise knowledge grounding, and live external API execution.*
+### 🏥 3. [Insurance Premium Prediction MLOps](https://github.com/JaywardhanYadav/Insurance-premium-prediction-mlops) — Production MLOps with Automated Drift Monitoring
+> *An end-to-end production MLOps pipeline featuring ensemble regression (XGBoost + LightGBM), Optuna hyperparameter tuning, MLflow experiment tracking, MSSQL inference logging, and Evidently AI data drift detection.*
 
-- **Conversational Memory:** Uses windowed buffer memory and summarized vector history for long-term customer context retention.
-- **Function Dispatching:** Dynamically executes account checks, ticket status lookups, and escalations via structured JSON schema tool calling.
-- **Tech Stack:** `Python` • `LangChain` • `OpenAI API` • `Vector Database` • `FastAPI` • `Docker`
+```
+┌──────────────────┐     ┌─────────────────────┐     ┌────────────────────────┐
+│ Streamlit UI /   │ ──> │ FastAPI Backend API │ ──> │ Inference Logging      │
+│ Client Request   │     │ (Pydantic Schemas)  │     │ (MSSQL Server DB)      │
+└──────────────────┘     └──────────┬──────────┘     └───────────┬────────────┘
+                                    │                            │
+                         ┌──────────▼──────────┐                 │
+                         │ MLflow Model Store  │                 ▼
+                         │ (XGBoost + LightGBM)│     ┌────────────────────────┐
+                         └─────────────────────┘     │ Evidently AI Monitor   │
+                                                     │ (Data & Concept Drift) │
+                                                     └────────────────────────┘
+```
 
----
-
-### ⚙️ 4. [End-to-End MLOps Pipeline](https://github.com/JaywardhanYadav) — Automated Training, Tracking & Deployment
-> *Production-grade continuous training and deployment pipeline with data drift detection, automated model registry, and containerized serving.*
-
-- **Experiment Tracking:** Centralized metric, hyperparameter, and artifact versioning powered by **MLflow**.
-- **Automated CI/CD:** GitHub Actions workflows for linting, unit testing, model packaging, and Docker image publishing.
-- **Sub-50ms Inference Service:** Deployed with **FastAPI** + **Gunicorn** / **Uvicorn** worker pools with comprehensive health check telemetry.
-- **Tech Stack:** `MLflow` • `Docker` • `FastAPI` • `GitHub Actions` • `Scikit-Learn` • `AWS EC2/S3`
+- **Ensemble Modeling & Optimization:** Blends **XGBoost** and **LightGBM** regressors optimized via **Optuna** to predict risk-adjusted premiums with automated validation scoring.
+- **Experiment Tracking & Model Registry:** Centrally versions hyperparameters, clinical feature pipelines, and serialized model artifacts powered by **MLflow**.
+- **Automated Data Drift Detection:** Employs **Evidently AI** to continuously evaluate live inference payloads against parquet reference baselines, logging statistical drift alerts into **MSSQL**.
+- **Multi-Container Orchestration:** Fully containerized with **Docker Compose**, seamlessly orchestrating FastAPI inference, Streamlit dashboard, MSSQL database, and scheduled drift monitoring jobs.
+- **Tech Stack:** `Python 3.12` • `FastAPI` • `MLflow` • `Docker Compose` • `Evidently AI` • `MSSQL` • `XGBoost` • `LightGBM` • `DVC` • `Streamlit`
 
 ---
 

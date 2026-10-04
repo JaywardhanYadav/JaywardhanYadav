@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 780" width="1280" height="780">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 790" width="1280" height="790">
   <defs>
     <!-- Modern Fonts & Keyframes -->
     <style>
@@ -16,7 +16,7 @@
       }
       @keyframes scanlineMove {
         0% { transform: translateY(0px); }
-        100% { transform: translateY(350px); }
+        100% { transform: translateY(355px); }
       }
       @keyframes borderShimmer {
         0% { stroke-dashoffset: 0; }
@@ -64,6 +64,14 @@
       .interactive-pill:hover {
         transform: translateY(-3px);
         filter: brightness(1.25);
+      }
+      .matrix-box {
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+        cursor: pointer;
+      }
+      .matrix-box:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.2);
       }
       .theme-toggle {
         cursor: pointer;
@@ -134,10 +142,10 @@
 
     <!-- Clip Paths for Smooth Borders -->
     <clipPath id="leftCardClip">
-      <rect x="30" y="30" width="455" height="720" rx="18" />
+      <rect x="30" y="30" width="455" height="730" rx="18" />
     </clipPath>
     <clipPath id="rightCardClip">
-      <rect x="505" y="30" width="745" height="720" rx="18" />
+      <rect x="505" y="30" width="745" height="730" rx="18" />
     </clipPath>
 
     <!-- Typing Animation Clip Paths (Scaled for 20px font!) -->
@@ -248,12 +256,12 @@
   </defs>
 
   <!-- Background Base Canvas -->
-  <rect width="1280" height="780" fill="url(#canvasGrad)"/>
+  <rect width="1280" height="790" fill="url(#canvasGrad)"/>
 
   <!-- Subtle Blueprint Tech Grid Background -->
   <g opacity="0.06" stroke="#FFFFFF" stroke-width="0.7">
     <path d="M 0 60 L 1280 60 M 0 120 L 1280 120 M 0 180 L 1280 180 M 0 240 L 1280 240 M 0 300 L 1280 300 M 0 360 L 1280 360 M 0 420 L 1280 420 M 0 480 L 1280 480 M 0 540 L 1280 540 M 0 600 L 1280 600 M 0 660 L 1280 660 M 0 720 L 1280 720"/>
-    <path d="M 60 0 L 60 780 M 120 0 L 120 780 M 180 0 L 180 780 M 240 0 L 240 780 M 300 0 L 300 780 M 360 0 L 360 780 M 420 0 L 420 780 M 480 0 L 480 780 M 540 0 L 540 780 M 600 0 L 600 780 M 660 0 L 660 780 M 720 0 L 720 780 M 780 0 L 780 780 M 840 0 L 840 780 M 900 0 L 900 780 M 960 0 L 960 780 M 1020 0 L 1020 780 M 1080 0 L 1080 780 M 1140 0 L 1140 780 M 1200 0 L 1200 780 M 1260 0 L 1260 780"/>
+    <path d="M 60 0 L 60 790 M 120 0 L 120 790 M 180 0 L 180 790 M 240 0 L 240 790 M 300 0 L 300 790 M 360 0 L 360 790 M 420 0 L 420 790 M 480 0 L 480 790 M 540 0 L 540 790 M 600 0 L 600 790 M 660 0 L 660 790 M 720 0 L 720 790 M 780 0 L 780 790 M 840 0 L 840 790 M 900 0 L 900 790 M 960 0 L 960 790 M 1020 0 L 1020 790 M 1080 0 L 1080 790 M 1140 0 L 1140 790 M 1200 0 L 1200 790 M 1260 0 L 1260 790"/>
   </g>
 
   <!-- Ambient Glow Orbs -->
@@ -263,8 +271,8 @@
 
   <!-- ================= LEFT SECTION (TERMINAL & STUDENT PORTRAIT) ================= -->
   <g clip-path="url(#leftCardClip)">
-    <rect x="30" y="30" width="455" height="720" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-    <rect x="30" y="30" width="455" height="720" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
+    <rect x="30" y="30" width="455" height="730" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+    <rect x="30" y="30" width="455" height="730" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Left Header Bar -->
     <rect x="30" y="30" width="455" height="46" fill="#0F172A" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
@@ -286,7 +294,7 @@
     </text>
 
     <!-- Student Portrait Screen Box -->
-    <rect x="44" y="110" width="427" height="350" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <rect x="44" y="110" width="427" height="355" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
 
     <!-- Scanline sweep animation across portrait box -->
     <g clip-path="url(#leftCardClip)">
@@ -294,7 +302,7 @@
     </g>
 
     <!-- Floating Student Line Art Container with Glow -->
-    <g class="portrait-group" filter="url(#lineGlow)" transform="translate(15, 16)">
+    <g class="portrait-group" filter="url(#lineGlow)" transform="translate(15, 18)">
       <!-- Radar Background Concentric Rings -->
       <circle cx="242.5" cy="225" r="95" stroke="url(#asciiGrad)" stroke-width="0.8" stroke-dasharray="4 6" fill="none" opacity="0.18"/>
       <circle cx="242.5" cy="225" r="128" stroke="url(#asciiGrad)" stroke-width="0.6" stroke-dasharray="2 8" fill="none" opacity="0.12"/>
@@ -377,29 +385,32 @@
     </g>
 
     <!-- Terminal Footer Box -->
-    <rect x="44" y="476" width="427" height="254" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <rect x="44" y="480" width="427" height="260" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
 
-    <!-- Terminal System Telemetry Logs (Enlarged to 14.5px!) -->
-    <g transform="translate(60, 516)" class="font-mono" font-size="14.5">
+    <!-- Terminal System Telemetry Logs (Enlarged to 15.5px!) -->
+    <g transform="translate(60, 524)" class="font-mono" font-size="15.5">
       <text y="0" fill="#94A3B8">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Name:</tspan> Jaywardhan Yadav
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="700">Name:</tspan> Jaywardhan Yadav
       </text>
-      <text y="40" fill="#94A3B8">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Education:</tspan> MSc Data Science
+      <text y="42" fill="#94A3B8">
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="700">Education:</tspan> MSc Data Science
       </text>
-      <text y="80" fill="#94A3B8">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Location:</tspan> Pune, India
+      <text y="84" fill="#94A3B8">
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="700">Location:</tspan> Pune, India
       </text>
-      <text y="124" fill="#94A3B8">
-        <tspan fill="#10B981">✓</tspan> <tspan fill="#10B981" font-weight="700">Looking Opportunities:</tspan> AI/ML Engineer, Data Scientist
+      <text y="130" fill="#94A3B8">
+        <tspan fill="#10B981">✓</tspan> <tspan fill="#10B981" font-weight="800">Looking Opportunities:</tspan>
+      </text>
+      <text x="24" y="160" fill="#FFFFFF" font-size="14.5" font-weight="700">
+        AI/ML Engineer, Data Scientist
       </text>
     </g>
   </g>
 
   <!-- ================= RIGHT SECTION (PROFESSIONAL TERMINAL) ================= -->
   <g clip-path="url(#rightCardClip)">
-    <rect x="505" y="30" width="745" height="720" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-    <rect x="505" y="30" width="745" height="720" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
+    <rect x="505" y="30" width="745" height="730" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+    <rect x="505" y="30" width="745" height="730" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Right Header Bar -->
     <rect x="505" y="30" width="745" height="46" fill="#0F172A" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
@@ -506,35 +517,43 @@
       </rect>
     </g>
 
-    <!-- Info Matrix Grid (Enlarged to 14.5px!) -->
-    <g transform="translate(540, 314)">
-      <!-- Row 1, Col 1: Email -->
-      <g transform="translate(0, 0)">
-        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">✉️ Email:</text>
-        <a href="mailto:jaywardhan.tech@gmail.com" xlink:href="mailto:jaywardhan.tech@gmail.com" target="_blank"><text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">jaywardhan.tech@gmail.com</text></a>
+    <!-- Info Matrix Cards Grid (Enlarged to 44px Cards with 15.5px Bold Typography!) -->
+    <g transform="translate(540, 310)">
+      <!-- Card 1: Email -->
+      <a href="mailto:jaywardhan.tech@gmail.com" xlink:href="mailto:jaywardhan.tech@gmail.com" target="_blank">
+        <g transform="translate(0, 0)" class="matrix-box">
+          <rect width="330" height="44" rx="10" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1.2"/>
+          <text x="14" y="27" class="font-mono" font-size="15" font-weight="700" fill="#22D3EE">✉️ Email</text>
+          <text x="100" y="27.5" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">jaywardhan.tech@gmail.com</text>
+        </g>
+      </a>
+
+      <!-- Card 2: Education -->
+      <g transform="translate(344, 0)" class="matrix-box">
+        <rect width="336" height="44" rx="10" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1.2"/>
+        <text x="14" y="27" class="font-mono" font-size="15" font-weight="700" fill="#22D3EE">🎓 Education</text>
+        <text x="132" y="27.5" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">MSc in Data Science</text>
       </g>
 
-      <!-- Row 1, Col 2: Education -->
-      <g transform="translate(345, 0)">
-        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">🎓 Education:</text>
-        <text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">MSc in Data Science</text>
+      <!-- Card 3: Location -->
+      <g transform="translate(0, 52)" class="matrix-box">
+        <rect width="330" height="44" rx="10" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1.2"/>
+        <text x="14" y="27" class="font-mono" font-size="15" font-weight="700" fill="#22D3EE">📍 Location</text>
+        <text x="120" y="27.5" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">Pune, India • Remote</text>
       </g>
 
-      <!-- Row 2, Col 1: Location -->
-      <g transform="translate(0, 40)">
-        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">📍 Location:</text>
-        <text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">Pune, India • Remote</text>
-      </g>
-
-      <!-- Row 2, Col 2: Portfolio -->
-      <g transform="translate(345, 40)">
-        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">💼 Portfolio:</text>
-        <a href="https://jaywardhanportfolio.netlify.app" xlink:href="https://jaywardhanportfolio.netlify.app" target="_blank"><text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">jaywardhanportfolio.netlify.app</text></a>
-      </g>
+      <!-- Card 4: Portfolio -->
+      <a href="https://jaywardhanportfolio.netlify.app" xlink:href="https://jaywardhanportfolio.netlify.app" target="_blank">
+        <g transform="translate(344, 52)" class="matrix-box">
+          <rect width="336" height="44" rx="10" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1.2"/>
+          <text x="14" y="27" class="font-mono" font-size="15" font-weight="700" fill="#22D3EE">💼 Portfolio</text>
+          <text x="126" y="27.5" class="font-sans" font-size="14.5" font-weight="700" fill="#FFFFFF">jaywardhanportfolio.netlify.app</text>
+        </g>
+      </a>
     </g>
 
     <!-- Skills Section: 4 Rows of Enlarged Glowing Interactive Pills (Height 38px, Font 14px bold!) -->
-    <g transform="translate(540, 412)">
+    <g transform="translate(540, 426)">
       <text x="0" y="0" class="font-mono" font-size="14" font-weight="800" fill="#94A3B8" letter-spacing="1">
         // CORE CAPABILITIES &amp; TECH STACK
       </text>
@@ -689,10 +708,10 @@
     </g>
 
     <!-- Bottom Separator Divider -->
-    <line x1="540" y1="630" x2="1215" y2="630" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+    <line x1="540" y1="644" x2="1215" y2="644" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
 
     <!-- Bottom Social Links Bar (Enlarged to 44px height, 14px text!) -->
-    <g transform="translate(540, 648)">
+    <g transform="translate(540, 660)">
       <!-- GitHub Button -->
       <a href="https://github.com/JaywardhanYadav" xlink:href="https://github.com/JaywardhanYadav" target="_blank">
         <g transform="translate(0, 0)" class="social-link">

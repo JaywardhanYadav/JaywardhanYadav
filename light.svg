@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="14 14 1152 582" width="1180" height="610">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="14 14 1152 622" width="1180" height="650">
   <defs>
     <!-- Modern Fonts & Keyframes -->
     <style>
@@ -169,10 +169,10 @@
 
     <!-- Clip Paths for Terminal Window Content -->
     <clipPath id="leftCardClip">
-      <rect x="30" y="30" width="425" height="550" rx="16" />
+      <rect x="30" y="30" width="425" height="590" rx="16" />
     </clipPath>
     <clipPath id="rightCardClip">
-      <rect x="475" y="30" width="675" height="550" rx="16" />
+      <rect x="475" y="30" width="675" height="590" rx="16" />
     </clipPath>
 
         <!-- Animated Typing ClipPaths for 5 Rotating Phrases -->
@@ -223,7 +223,7 @@
   </defs>
 
   <!-- ================= CANVAS BACKGROUND ================= -->
-  <rect x="0" y="0" width="1180" height="610" rx="20" fill="url(#canvasGrad)"/>
+  <rect x="0" y="0" width="1180" height="650" rx="20" fill="url(#canvasGrad)"/>
 
   <!-- Background Floating Radial Orbs -->
   <g filter="url(#blurOrbs)" opacity="0.12">
@@ -242,7 +242,7 @@
   </g>
 
   <!-- Ambient Matrix Dots Overlay -->
-  <rect x="0" y="0" width="1180" height="610" fill="url(#dotGrid)" pointer-events="none"/>
+  <rect x="0" y="0" width="1180" height="650" fill="url(#dotGrid)" pointer-events="none"/>
 
   <!-- Tiny Animated Cyber Floating Particles -->
   <g opacity="0.3" pointer-events="none">
@@ -275,10 +275,10 @@
   <!-- ================= LEFT SECTION (LINE-ART PORTRAIT) ================= -->
   <g clip-path="url(#leftCardClip)">
     <!-- Left Card Background & Glass -->
-    <rect x="30" y="30" width="425" height="550" rx="16" fill="url(#cardGrad)" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1.2"/>
+    <rect x="30" y="30" width="425" height="590" rx="16" fill="url(#cardGrad)" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1.2"/>
     
     <!-- Shimmering Border Accent -->
-    <rect x="30" y="30" width="425" height="550" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
+    <rect x="30" y="30" width="425" height="590" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Glass Reflection Sheen -->
     <polygon points="30,30 240,30 110,240 30,240" fill="url(#glassReflect)" pointer-events="none"/>
@@ -377,20 +377,20 @@
     </g>
 
     <!-- Terminal Footer Box -->
-    <rect x="44" y="420" width="397" height="142" rx="10" fill="rgba(241, 245, 249, 0.8)" stroke="rgba(15, 23, 42, 0.06)" stroke-width="1"/>
+    <rect x="44" y="420" width="397" height="176" rx="10" fill="rgba(241, 245, 249, 0.8)" stroke="rgba(15, 23, 42, 0.06)" stroke-width="1"/>
 
     <!-- Terminal System Telemetry Logs -->
     <g transform="translate(56, 446)" class="font-mono" font-size="12">
       <text y="0" fill="#64748B">
         <tspan fill="#06B6D4">></tspan> <tspan fill="#475569">Name:</tspan> Jaywardhan Yadav
       </text>
-      <text y="26" fill="#64748B">
+      <text y="28" fill="#64748B">
         <tspan fill="#06B6D4">></tspan> <tspan fill="#475569">Education:</tspan> MSc Data Science
       </text>
-      <text y="52" fill="#64748B">
+      <text y="56" fill="#64748B">
         <tspan fill="#06B6D4">></tspan> <tspan fill="#475569">Location:</tspan> Pune, India
       </text>
-      <text y="78" fill="#64748B">
+      <text y="88" fill="#64748B">
         <tspan fill="#10B981">✓</tspan> <tspan fill="#10B981">Looking Opportunities:</tspan> AI/ML Engineer, Data Scientist
         <tspan fill="#06B6D4" class="cursor-blink"> ▋</tspan>
       </text>
@@ -400,10 +400,10 @@
   <!-- ================= RIGHT SECTION (PROFESSIONAL TERMINAL) ================= -->
   <g clip-path="url(#rightCardClip)">
     <!-- Right Card Background & Glass -->
-    <rect x="475" y="30" width="675" height="550" rx="16" fill="url(#cardGrad)" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1.2"/>
+    <rect x="475" y="30" width="675" height="590" rx="16" fill="url(#cardGrad)" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1.2"/>
     
     <!-- Shimmering Border Accent -->
-    <rect x="475" y="30" width="675" height="550" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
+    <rect x="475" y="30" width="675" height="590" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Glass Reflection Sheen -->
     <polygon points="475,30 720,30 570,250 475,250" fill="url(#glassReflect)" pointer-events="none"/>
@@ -567,7 +567,7 @@
     </g>
 
         <!-- Skills Section: 4 Rows of Glowing Interactive Pills -->
-    <g transform="translate(506, 354)">
+    <g transform="translate(506, 362)">
       <text x="0" y="0" class="font-mono" font-size="11.5" font-weight="700" fill="#475569" letter-spacing="1">
         // CORE CAPABILITIES &amp; TECH STACK
       </text>
@@ -607,7 +607,7 @@
       </g>
 
       <!-- Row 2 -->
-      <g transform="translate(0, 46)">
+      <g transform="translate(0, 48)">
         <!-- Pill: PyTorch -->
         <g transform="translate(0, 0)" class="interactive-pill">
           <rect width="84" height="27" rx="6" fill="#F1F5F9" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1"/>
@@ -641,7 +641,7 @@
       </g>
 
       <!-- Row 3 -->
-      <g transform="translate(0, 78)">
+      <g transform="translate(0, 82)">
         <!-- Pill: FastAPI -->
         <g transform="translate(0, 0)" class="interactive-pill">
           <rect width="80" height="27" rx="6" fill="#F1F5F9" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1"/>
@@ -681,7 +681,7 @@
       </g>
 
       <!-- Row 4 -->
-      <g transform="translate(0, 110)">
+      <g transform="translate(0, 116)">
         <!-- Pill: Docker -->
         <g transform="translate(0, 0)" class="interactive-pill">
           <rect width="78" height="27" rx="6" fill="#F1F5F9" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1"/>
@@ -722,10 +722,10 @@
     </g>
 
     <!-- Bottom Separator Divider -->
-    <line x1="506" y1="502" x2="1120" y2="502" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1"/>
+    <line x1="506" y1="536" x2="1120" y2="536" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1"/>
 
         <!-- Bottom Social Links Bar -->
-    <g transform="translate(506, 516)">
+    <g transform="translate(506, 552)">
       <!-- GitHub Button -->
       <a href="https://github.com/JaywardhanYadav" xlink:href="https://github.com/JaywardhanYadav" target="_blank">
                 <g transform="translate(0, 0)" class="social-link">

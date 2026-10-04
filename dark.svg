@@ -1,15 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="14 14 1152 662" width="1180" height="690">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 780" width="1280" height="780">
   <defs>
     <!-- Modern Fonts & Keyframes -->
     <style>
       @keyframes floatPortrait {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-7px); }
-      }
-      @keyframes floatBlob {
-        0%, 100% { transform: translate(0px, 0px) scale(1); }
-        33% { transform: translate(25px, -18px) scale(1.08); }
-        66% { transform: translate(-20px, 15px) scale(0.95); }
       }
       @keyframes pulseGlow {
         0%, 100% { opacity: 0.35; }
@@ -21,7 +16,7 @@
       }
       @keyframes scanlineMove {
         0% { transform: translateY(0px); }
-        100% { transform: translateY(312px); }
+        100% { transform: translateY(350px); }
       }
       @keyframes borderShimmer {
         0% { stroke-dashoffset: 0; }
@@ -63,19 +58,19 @@
 
       /* Interactive Hover */
       .interactive-pill {
-        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), filter 0.25s ease;
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
         cursor: pointer;
       }
       .interactive-pill:hover {
-        transform: translateY(-2.5px);
+        transform: translateY(-3px);
         filter: brightness(1.25);
       }
-            .theme-toggle {
+      .theme-toggle {
         cursor: pointer;
         transition: filter 0.25s ease, opacity 0.25s ease;
       }
       .theme-toggle:hover {
-        filter: brightness(1.2) drop-shadow(0 0 8px rgba(34, 211, 238, 0.6));
+        filter: brightness(1.2) drop-shadow(0 0 8px #22D3EE);
       }
       .social-link {
         transition: transform 0.25s ease, filter 0.25s ease;
@@ -83,285 +78,290 @@
       }
       a { text-decoration: none; cursor: pointer; }
       .social-link:hover {
-        transform: translateY(-2px);
+        transform: translateY(-2.5px);
+        filter: brightness(1.15);
       }
     </style>
 
     <!-- Gradients -->
     <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
-      <stop offset="50%" stop-color="#030712"/>
-      <stop offset="100%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
     </linearGradient>
 
-    <!-- Moving Dynamic Accent Gradient -->
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED">
-        <animate attributeName="stop-color" values="#7C3AED; #22D3EE; #10B981; #7C3AED" dur="9s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" stop-color="#22D3EE">
-        <animate attributeName="stop-color" values="#22D3EE; #10B981; #7C3AED; #22D3EE" dur="9s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#10B981">
-        <animate attributeName="stop-color" values="#10B981; #7C3AED; #22D3EE; #10B981" dur="9s" repeatCount="indefinite"/>
-      </stop>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15, 23, 42, 0.78)"/>
+      <stop offset="100%" stop-color="rgba(3, 7, 18, 0.88)"/>
     </linearGradient>
 
-    <!-- Portrait Dynamic Line Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
     <linearGradient id="asciiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED">
-        <animate attributeName="stop-color" values="#7C3AED; #22D3EE; #10B981; #7C3AED" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="70%" stop-color="#22D3EE">
-        <animate attributeName="stop-color" values="#22D3EE; #10B981; #7C3AED; #22D3EE" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#10B981">
-        <animate attributeName="stop-color" values="#10B981; #7C3AED; #22D3EE; #10B981" dur="8s" repeatCount="indefinite"/>
-      </stop>
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
     </linearGradient>
 
-    <!-- Border Glow Shimmer Gradient -->
     <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.1"/>
-      <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.8"/>
-      <stop offset="55%" stop-color="#10B981" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
     </linearGradient>
 
-    <!-- Scanline Gradient -->
     <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(34, 211, 238, 0.18)" stop-opacity="0"/>
-      <stop offset="50%" stop-color="rgba(34, 211, 238, 0.18)" stop-opacity="1"/>
-      <stop offset="100%" stop-color="rgba(34, 211, 238, 0.18)" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Card Background Gradient -->
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#0B1120" stop-opacity="0.85"/>
-    </linearGradient>
-
-    <!-- Glass Reflection Gradient -->
-    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="white" stop-opacity="0.07"/>
-      <stop offset="40%" stop-color="white" stop-opacity="0.02"/>
-      <stop offset="100%" stop-color="white" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Mesh Dot Grid Pattern -->
-    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.025)" />
-    </pattern>
-
-    <!-- Subtle Blur Filter for Background Lights -->
-    <filter id="blurOrbs" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="65" />
+    <!-- Filters -->
+    <filter id="glowSubtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <!-- Line Glow Filter for Portrait -->
     <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Clip Paths for Terminal Window Content -->
+    <!-- Clip Paths for Smooth Borders -->
     <clipPath id="leftCardClip">
-      <rect x="30" y="30" width="425" height="630" rx="16" />
+      <rect x="30" y="30" width="455" height="720" rx="18" />
     </clipPath>
     <clipPath id="rightCardClip">
-      <rect x="475" y="30" width="675" height="630" rx="16" />
+      <rect x="505" y="30" width="745" height="720" rx="18" />
     </clipPath>
 
-        <!-- Animated Typing ClipPaths for 5 Rotating Phrases -->
+    <!-- Typing Animation Clip Paths (Scaled for 20px font!) -->
     <clipPath id="typeClip1">
-      <rect x="36" y="0" height="48" width="0">
+      <rect x="38" y="0" width="0" height="54">
         <animate attributeName="width" 
-          values="0; 375; 375; 0; 0" 
-          keyTimes="0; 0.06; 0.18; 0.195; 1" 
+          values="
+            0; 400; 400; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0"
+          keyTimes="
+            0; 0.06; 0.18; 0.195;
+            0.20; 0.26; 0.38; 0.395;
+            0.40; 0.45; 0.58; 0.595;
+            0.60; 0.66; 0.78; 0.795;
+            0.80; 0.88; 0.98; 0.995;
+            1"
           dur="20s" repeatCount="indefinite" />
       </rect>
     </clipPath>
 
     <clipPath id="typeClip2">
-      <rect x="36" y="0" height="48" width="0">
+      <rect x="38" y="0" width="0" height="54">
         <animate attributeName="width" 
-          values="0; 0; 360; 360; 0; 0" 
-          keyTimes="0; 0.20; 0.26; 0.38; 0.395; 1" 
+          values="
+            0; 0; 0; 0;
+            0; 385; 385; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0"
+          keyTimes="
+            0; 0.06; 0.18; 0.195;
+            0.20; 0.26; 0.38; 0.395;
+            0.40; 0.45; 0.58; 0.595;
+            0.60; 0.66; 0.78; 0.795;
+            0.80; 0.88; 0.98; 0.995;
+            1"
           dur="20s" repeatCount="indefinite" />
       </rect>
     </clipPath>
 
     <clipPath id="typeClip3">
-      <rect x="36" y="0" height="48" width="0">
+      <rect x="38" y="0" width="0" height="54">
         <animate attributeName="width" 
-          values="0; 0; 195; 195; 0; 0" 
-          keyTimes="0; 0.40; 0.45; 0.58; 0.595; 1" 
+          values="
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 205; 205; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0"
+          keyTimes="
+            0; 0.06; 0.18; 0.195;
+            0.20; 0.26; 0.38; 0.395;
+            0.40; 0.45; 0.58; 0.595;
+            0.60; 0.66; 0.78; 0.795;
+            0.80; 0.88; 0.98; 0.995;
+            1"
           dur="20s" repeatCount="indefinite" />
       </rect>
     </clipPath>
 
     <clipPath id="typeClip4">
-      <rect x="36" y="0" height="48" width="0">
+      <rect x="38" y="0" width="0" height="54">
         <animate attributeName="width" 
-          values="0; 0; 285; 285; 0; 0" 
-          keyTimes="0; 0.60; 0.66; 0.78; 0.795; 1" 
+          values="
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 305; 305; 0;
+            0; 0; 0; 0;
+            0"
+          keyTimes="
+            0; 0.06; 0.18; 0.195;
+            0.20; 0.26; 0.38; 0.395;
+            0.40; 0.45; 0.58; 0.595;
+            0.60; 0.66; 0.78; 0.795;
+            0.80; 0.88; 0.98; 0.995;
+            1"
           dur="20s" repeatCount="indefinite" />
       </rect>
     </clipPath>
 
     <clipPath id="typeClip5">
-      <rect x="36" y="0" height="48" width="0">
+      <rect x="38" y="0" width="0" height="54">
         <animate attributeName="width" 
-          values="0; 0; 495; 495; 0; 0" 
-          keyTimes="0; 0.80; 0.88; 0.98; 0.995; 1" 
+          values="
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 0; 0; 0;
+            0; 530; 530; 0;
+            0"
+          keyTimes="
+            0; 0.06; 0.18; 0.195;
+            0.20; 0.26; 0.38; 0.395;
+            0.40; 0.45; 0.58; 0.595;
+            0.60; 0.66; 0.78; 0.795;
+            0.80; 0.88; 0.98; 0.995;
+            1"
           dur="20s" repeatCount="indefinite" />
       </rect>
     </clipPath>
   </defs>
 
-  <!-- ================= CANVAS BACKGROUND ================= -->
-  <rect x="0" y="0" width="1180" height="690" rx="20" fill="url(#canvasGrad)"/>
+  <!-- Background Base Canvas -->
+  <rect width="1280" height="780" fill="url(#canvasGrad)"/>
 
-  <!-- Background Floating Radial Orbs -->
-  <g filter="url(#blurOrbs)" opacity="0.22">
-    <circle cx="180" cy="140" r="160" fill="#7C3AED">
-      <animateTransform attributeName="transform" type="translate"
-        values="0,0; 35,-25; -20,30; 0,0" dur="14s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="680" cy="500" r="190" fill="#22D3EE">
-      <animateTransform attributeName="transform" type="translate"
-        values="0,0; -40,-30; 30,20; 0,0" dur="18s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="1050" cy="180" r="170" fill="#10B981">
-      <animateTransform attributeName="transform" type="translate"
-        values="0,0; 25,35; -30,-20; 0,0" dur="16s" repeatCount="indefinite" />
-    </circle>
+  <!-- Subtle Blueprint Tech Grid Background -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="0.7">
+    <path d="M 0 60 L 1280 60 M 0 120 L 1280 120 M 0 180 L 1280 180 M 0 240 L 1280 240 M 0 300 L 1280 300 M 0 360 L 1280 360 M 0 420 L 1280 420 M 0 480 L 1280 480 M 0 540 L 1280 540 M 0 600 L 1280 600 M 0 660 L 1280 660 M 0 720 L 1280 720"/>
+    <path d="M 60 0 L 60 780 M 120 0 L 120 780 M 180 0 L 180 780 M 240 0 L 240 780 M 300 0 L 300 780 M 360 0 L 360 780 M 420 0 L 420 780 M 480 0 L 480 780 M 540 0 L 540 780 M 600 0 L 600 780 M 660 0 L 660 780 M 720 0 L 720 780 M 780 0 L 780 780 M 840 0 L 840 780 M 900 0 L 900 780 M 960 0 L 960 780 M 1020 0 L 1020 780 M 1080 0 L 1080 780 M 1140 0 L 1140 780 M 1200 0 L 1200 780 M 1260 0 L 1260 780"/>
   </g>
 
-  <!-- Ambient Matrix Dots Overlay -->
-  <rect x="0" y="0" width="1180" height="690" fill="url(#dotGrid)" pointer-events="none"/>
+  <!-- Ambient Glow Orbs -->
+  <circle cx="200" cy="150" r="280" fill="#22D3EE" opacity="0.07" filter="url(#glowSubtle)" />
+  <circle cx="1050" cy="550" r="320" fill="#8B5CF6" opacity="0.06" filter="url(#glowSubtle)" />
+  <circle cx="650" cy="700" r="240" fill="#10B981" opacity="0.05" filter="url(#glowSubtle)" />
 
-  <!-- Tiny Animated Cyber Floating Particles -->
-  <g opacity="0.5" pointer-events="none">
-    <circle cx="120" cy="220" r="1.5" fill="#22D3EE">
-      <animate attributeName="cy" values="220; 180; 220" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2; 0.9; 0.2" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="380" cy="90" r="1.8" fill="#7C3AED">
-      <animate attributeName="cy" values="90; 60; 90" dur="8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1; 0.8; 0.1" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="610" cy="140" r="1.5" fill="#22D3EE">
-      <animate attributeName="cy" values="140; 110; 140" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2; 0.7; 0.2" dur="6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="920" cy="80" r="1.8" fill="#7C3AED">
-      <animate attributeName="cy" values="80; 50; 80" dur="9s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3; 0.8; 0.3" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1120" cy="360" r="1.5" fill="#22D3EE">
-      <animate attributeName="cy" values="360; 320; 360" dur="6.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2; 0.9; 0.2" dur="4.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="480" cy="540" r="1.5" fill="#7C3AED">
-      <animate attributeName="cy" values="540; 510; 540" dur="7.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1; 0.8; 0.1" dur="5.5s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- ================= LEFT SECTION (LINE-ART PORTRAIT) ================= -->
+  <!-- ================= LEFT SECTION (TERMINAL & STUDENT PORTRAIT) ================= -->
   <g clip-path="url(#leftCardClip)">
-    <!-- Left Card Background & Glass -->
-    <rect x="30" y="30" width="425" height="630" rx="16" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.2"/>
-    
-    <!-- Shimmering Border Accent -->
-    <rect x="30" y="30" width="425" height="630" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
-
-    <!-- Glass Reflection Sheen -->
-    <polygon points="30,30 240,30 110,240 30,240" fill="url(#glassReflect)" pointer-events="none"/>
+    <rect x="30" y="30" width="455" height="720" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+    <rect x="30" y="30" width="455" height="720" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Left Header Bar -->
-    <rect x="30" y="30" width="425" height="42" fill="#0F172A" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-    <!-- Window Control Buttons -->
-    <circle cx="52" cy="51" r="5.5" fill="#EF4444" />
-    <circle cx="70" cy="51" r="5.5" fill="#F59E0B" />
-    <circle cx="88" cy="51" r="5.5" fill="#10B981" />
+    <rect x="30" y="30" width="455" height="46" fill="#0F172A" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+    <circle cx="54" cy="53" r="6" fill="#EF4444" />
+    <circle cx="74" cy="53" r="6" fill="#F59E0B" />
+    <circle cx="94" cy="53" r="6" fill="#10B981" />
+    <text x="120" y="58" class="font-mono" font-size="13" font-weight="600" fill="#94A3B8">student_profile : Jaywardhan_Yadav</text>
 
-    <text x="112" y="55" class="font-mono" font-size="12.5" font-weight="600" fill="#94A3B8">student_profile : Jaywardhan_Yadav</text>
-
-        <!-- Live Status Beacon -->
-    <g transform="translate(432, 51)">
-      <circle cx="0" cy="0" r="6" fill="#10B981" opacity="0.3" class="beacon-pulse"/>
-      <circle cx="0" cy="0" r="3.5" fill="#10B981" />
+    <!-- Live Status Beacon -->
+    <g transform="translate(452, 53)">
+      <circle cx="0" cy="0" r="7" fill="#10B981" opacity="0.35" class="beacon-pulse"/>
+      <circle cx="0" cy="0" r="4" fill="#10B981" />
     </g>
 
     <!-- Sub-header telemetry strip -->
-    <line x1="30" y1="72" x2="455" y2="72" stroke="rgba(255, 255, 255, 0.09)" stroke-width="0.8"/>
-    <text x="46" y="88" class="font-mono" font-size="9.5" fill="#64748B" letter-spacing="0.5">
+    <line x1="30" y1="76" x2="485" y2="76" stroke="rgba(255, 255, 255, 0.12)" stroke-width="0.8"/>
+    <text x="46" y="96" class="font-mono" font-size="11.5" fill="#94A3B8" letter-spacing="0.5">
       Profile :
     </text>
 
     <!-- Student Portrait Screen Box -->
-    <rect x="44" y="98" width="397" height="312" rx="10" fill="rgba(3, 7, 18, 0.75)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+    <rect x="44" y="110" width="427" height="350" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
 
     <!-- Scanline sweep animation across portrait box -->
     <g clip-path="url(#leftCardClip)">
-      <rect x="44" y="98" width="397" height="45" fill="url(#scanlineGrad)" class="scanline-bar" pointer-events="none"/>
+      <rect x="44" y="110" width="427" height="48" fill="url(#scanlineGrad)" class="scanline-bar" pointer-events="none"/>
     </g>
 
     <!-- Floating Student Line Art Container with Glow -->
-    <g class="portrait-group" filter="url(#lineGlow)">
-      <path d="M 60 122 L 60 112 L 72 112" stroke="url(#asciiGrad)" stroke-width="1.8" fill="none" opacity="0.6"/>
-      <path d="M 425 122 L 425 112 L 413 112" stroke="url(#asciiGrad)" stroke-width="1.8" fill="none" opacity="0.6"/>
-      <path d="M 60 384 L 60 396 L 72 396" stroke="url(#asciiGrad)" stroke-width="1.8" fill="none" opacity="0.6"/>
-      <path d="M 425 384 L 425 396 L 413 396" stroke="url(#asciiGrad)" stroke-width="1.8" fill="none" opacity="0.6"/>
-      
-      
+    <g class="portrait-group" filter="url(#lineGlow)" transform="translate(15, 16)">
+      <!-- Radar Background Concentric Rings -->
       <circle cx="242.5" cy="225" r="95" stroke="url(#asciiGrad)" stroke-width="0.8" stroke-dasharray="4 6" fill="none" opacity="0.18"/>
       <circle cx="242.5" cy="225" r="128" stroke="url(#asciiGrad)" stroke-width="0.6" stroke-dasharray="2 8" fill="none" opacity="0.12"/>
+
+      <!-- Clean Realistic Hair Contours -->
       <path d="M 182 172 C 170 148 175 122 198 108 C 215 97 242 95 264 99 C 285 103 306 116 312 134 C 318 148 314 165 306 176" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 198 116 C 216 106 242 104 263 108 C 283 112 298 122 304 135" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 215 106 C 232 100 254 101 272 106 C 286 110 296 118 300 128" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 188 142 C 196 132 208 126 225 124 C 238 122 250 124 262 128" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 235 104 C 248 108 262 114 274 124" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 184 158 C 192 148 204 142 220 140" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
+      
+      <!-- Side Forehead & Sideburns -->
       <path d="M 186 170 C 192 155 204 148 220 146 C 240 144 256 140 272 142 C 286 144 298 152 304 168" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 186 170 L 187 195" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 304 168 L 302 195" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
+
+      <!-- Natural Realistic Ears -->
       <path d="M 187 192 C 178 192 173 200 174 212 C 175 222 181 228 188 226" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 181 204 C 180 209 182 216 186 218" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 302 192 C 311 192 316 200 315 212 C 314 222 308 228 301 226" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 308 204 C 309 209 307 216 303 218" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
+
+      <!-- Jawline and Chin -->
       <path d="M 188 218 C 190 242 201 266 218 277 C 226 283 234 285 242.5 285 C 251 285 259 283 267 277 C 284 266 295 242 297 218" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
+
+      <!-- Eyebrows -->
       <path d="M 198 174 C 206 170 218 170 226 173" stroke="url(#asciiGrad)" stroke-width="2.4" stroke-linecap="round" fill="none" class="draw-line"/>
       <path d="M 259 173 C 267 170 279 170 287 174" stroke="url(#asciiGrad)" stroke-width="2.4" stroke-linecap="round" fill="none" class="draw-line"/>
+
+      <!-- Rectangular Glasses Frames -->
       <path d="M 195 183 C 195 179 198 177 203 177 L 227 177 C 232 177 235 179 235 183 L 234 201 C 234 206 230 210 225 210 L 205 210 C 200 210 195 206 195 201 Z" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 250 183 C 250 179 253 177 258 177 L 282 177 C 287 177 290 179 290 183 L 289 201 C 289 206 285 210 280 210 L 260 210 C 255 210 250 206 250 201 Z" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 235 185 C 239 182 246 182 250 185" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 195 186 L 187 189" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 290 186 L 298 189" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
+
+      <!-- Eyes & Pupils behind glasses -->
       <path d="M 204 193 C 209 189 219 189 224 193" stroke="url(#asciiGrad)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
       <ellipse cx="214" cy="194" rx="2.5" ry="3" fill="url(#asciiGrad)"/>
       <circle cx="215" cy="193" r="0.8" fill="#FFFFFF"/>
       <path d="M 261 193 C 266 189 276 189 281 193" stroke="url(#asciiGrad)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
       <ellipse cx="271" cy="194" rx="2.5" ry="3" fill="url(#asciiGrad)"/>
       <circle cx="272" cy="193" r="0.8" fill="#FFFFFF"/>
+
+      <!-- Nose -->
       <path d="M 242 198 L 241 226 C 241 230 245 233 247 231" stroke="url(#asciiGrad)" stroke-width="1.8" stroke-linecap="round" fill="none" class="draw-line"/>
       <path d="M 235 230 C 237 232 240 232 242 230" stroke="url(#asciiGrad)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
       <path d="M 246 230 C 248 232 251 232 253 230" stroke="url(#asciiGrad)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+
+      <!-- Confident Smile -->
       <path d="M 226 250 C 235 257 250 257 259 250" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" fill="none" class="draw-line"/>
       <path d="M 236 262 C 240 264 245 264 249 262" stroke="url(#asciiGrad)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+      <!-- Neck & Collar Contours -->
       <path d="M 218 277 L 213 306" stroke="url(#asciiGrad)" stroke-width="1.9" stroke-linecap="round" fill="none" class="draw-line"/>
       <path d="M 267 277 L 272 306" stroke="url(#asciiGrad)" stroke-width="1.9" stroke-linecap="round" fill="none" class="draw-line"/>
       <path d="M 240 293 C 242.5 296 244 296 245 293" stroke="url(#asciiGrad)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+
+      <!-- Over-ear Headphones -->
       <rect x="180" y="288" width="22" height="36" rx="9" transform="rotate(-15 191 306)" stroke="url(#asciiGrad)" stroke-width="2.2" fill="none" class="draw-line"/>
       <rect x="184" y="292" width="14" height="28" rx="6" transform="rotate(-15 191 306)" stroke="url(#asciiGrad)" stroke-width="1.2" fill="none" opacity="0.6"/>
       <rect x="283" y="288" width="22" height="36" rx="9" transform="rotate(15 294 306)" stroke="url(#asciiGrad)" stroke-width="2.2" fill="none" class="draw-line"/>
       <rect x="287" y="292" width="14" height="28" rx="6" transform="rotate(15 294 306)" stroke="url(#asciiGrad)" stroke-width="1.2" fill="none" opacity="0.6"/>
       <path d="M 192 318 C 210 334 275 334 293 318" stroke="url(#asciiGrad)" stroke-width="2.6" stroke-linecap="round" fill="none" class="draw-line"/>
+
+      <!-- Casual Hoodie / Jacket Shoulders -->
       <path d="M 205 316 C 220 326 265 326 280 316" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 175 318 C 155 330 135 352 110 398" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
       <path d="M 310 318 C 330 330 350 352 375 398" stroke="url(#asciiGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" class="draw-line"/>
@@ -377,157 +377,124 @@
     </g>
 
     <!-- Terminal Footer Box -->
-    <rect x="44" y="424" width="397" height="198" rx="10" fill="rgba(3, 7, 18, 0.75)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+    <rect x="44" y="476" width="427" height="254" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
 
-    <!-- Terminal System Telemetry Logs -->
-    <g transform="translate(56, 452)" class="font-mono" font-size="12.5">
-      <text y="0" fill="#64748B">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#94A3B8">Name:</tspan> Jaywardhan Yadav
+    <!-- Terminal System Telemetry Logs (Enlarged to 14.5px!) -->
+    <g transform="translate(60, 516)" class="font-mono" font-size="14.5">
+      <text y="0" fill="#94A3B8">
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Name:</tspan> Jaywardhan Yadav
       </text>
-      <text y="32" fill="#64748B">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#94A3B8">Education:</tspan> MSc Data Science
+      <text y="40" fill="#94A3B8">
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Education:</tspan> MSc Data Science
       </text>
-      <text y="64" fill="#64748B">
-        <tspan fill="#22D3EE">></tspan> <tspan fill="#94A3B8">Location:</tspan> Pune, India
+      <text y="80" fill="#94A3B8">
+        <tspan fill="#22D3EE">></tspan> <tspan fill="#FFFFFF" font-weight="600">Location:</tspan> Pune, India
       </text>
-      <text y="100" fill="#64748B">
-        <tspan fill="#10B981">✓</tspan> <tspan fill="#10B981">Looking Opportunities:</tspan> AI/ML Engineer, Data Scientist
-        <tspan fill="#22D3EE" class="cursor-blink"> ▋</tspan>
+      <text y="124" fill="#94A3B8">
+        <tspan fill="#10B981">✓</tspan> <tspan fill="#10B981" font-weight="700">Looking Opportunities:</tspan> AI/ML Engineer, Data Scientist
       </text>
     </g>
   </g>
 
   <!-- ================= RIGHT SECTION (PROFESSIONAL TERMINAL) ================= -->
   <g clip-path="url(#rightCardClip)">
-    <!-- Right Card Background & Glass -->
-    <rect x="475" y="30" width="675" height="630" rx="16" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.2"/>
-    
-    <!-- Shimmering Border Accent -->
-    <rect x="475" y="30" width="675" height="630" rx="16" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
-
-    <!-- Glass Reflection Sheen -->
-    <polygon points="475,30 720,30 570,250 475,250" fill="url(#glassReflect)" pointer-events="none"/>
+    <rect x="505" y="30" width="745" height="720" rx="18" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+    <rect x="505" y="30" width="745" height="720" rx="18" fill="none" stroke="url(#borderGlow)" stroke-width="1.8" class="shimmer-stroke"/>
 
     <!-- Right Header Bar -->
-    <rect x="475" y="30" width="675" height="42" fill="#0F172A" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-    <!-- Window Control Buttons -->
-    <circle cx="497" cy="51" r="5.5" fill="#EF4444" />
-    <circle cx="515" cy="51" r="5.5" fill="#F59E0B" />
-    <circle cx="533" cy="51" r="5.5" fill="#10B981" />
+    <rect x="505" y="30" width="745" height="46" fill="#0F172A" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+    <circle cx="529" cy="53" r="6" fill="#EF4444" />
+    <circle cx="549" cy="53" r="6" fill="#F59E0B" />
+    <circle cx="569" cy="53" r="6" fill="#10B981" />
+    <text x="595" y="58" class="font-mono" font-size="13" font-weight="600" fill="#94A3B8">student_profile : Jaywardhan_Yadav</text>
 
-    <text x="558" y="55" class="font-mono" font-size="12.5" font-weight="600" fill="#94A3B8">student_profile : Jaywardhan_Yadav</text>
-
-        <!-- Interactive Theme Toggle Switch (Default Dark -> Click for Light Theme) -->
+    <!-- Interactive Theme Toggle Switch (Default Dark -> Click for Light Theme) -->
     <a href="light.svg" xlink:href="light.svg" target="_self" class="theme-toggle-link">
-      <g transform="translate(1068, 38)" class="theme-toggle" id="themeToggleBtn">
+      <g transform="translate(1160, 39)" class="theme-toggle" id="themeToggleBtn">
         <title>Switch to Light Theme</title>
-        
-        <!-- Theme Mode Indicator Label -->
-        <text x="-9" y="17" text-anchor="end" class="font-mono" font-size="9" font-weight="700" fill="#22D3EE" letter-spacing="0.5">DARK</text>
-
-        <!-- Toggle Track -->
-        <rect x="0" y="0" width="56" height="26" rx="13" fill="#090D16" stroke="rgba(34, 211, 238, 0.4)" stroke-width="1.3"/>
-
-        <!-- Inactive Sun on Right -->
-        <g transform="translate(42, 13)" opacity="0.35">
-          <circle cx="0" cy="0" r="3" fill="#F59E0B" />
-          <g stroke="#F59E0B" stroke-width="1.1" stroke-linecap="round">
-            <line x1="0" y1="-5.2" x2="0" y2="-4"/>
-            <line x1="0" y1="4" x2="0" y2="5.2"/>
-            <line x1="-5.2" y1="0" x2="-4" y2="0"/>
-            <line x1="4" y1="0" x2="5.2" y2="0"/>
-            <line x1="-3.6" y1="-3.6" x2="-2.8" y2="-2.8"/>
-            <line x1="2.8" y1="2.8" x2="3.6" y2="3.6"/>
-            <line x1="3.6" y1="-3.6" x2="2.8" y2="-2.8"/>
-            <line x1="-2.8" y1="2.8" x2="-3.6" y2="3.6"/>
+        <text x="-10" y="19" text-anchor="end" class="font-mono" font-size="10" font-weight="700" fill="#22D3EE" letter-spacing="0.5">DARK</text>
+        <rect x="0" y="0" width="60" height="28" rx="14" fill="#090D16" stroke="rgba(34, 211, 238, 0.45)" stroke-width="1.3"/>
+        <g transform="translate(45, 14)" opacity="0.35">
+          <circle cx="0" cy="0" r="3.2" fill="#F59E0B" />
+          <g stroke="#F59E0B" stroke-width="1.2" stroke-linecap="round">
+            <line x1="0" y1="-5.5" x2="0" y2="-4.2"/><line x1="0" y1="4.2" x2="0" y2="5.5"/>
+            <line x1="-5.5" y1="0" x2="-4.2" y2="0"/><line x1="4.2" y1="0" x2="5.5" y2="0"/>
+            <line x1="-3.8" y1="-3.8" x2="-2.9" y2="-2.9"/><line x1="2.9" y1="2.9" x2="3.8" y2="3.8"/>
+            <line x1="3.8" y1="-3.8" x2="2.9" y2="-2.9"/><line x1="-2.9" y1="2.9" x2="-3.8" y2="3.8"/>
           </g>
         </g>
-
-        <!-- Sliding Knob (Positioned at Dark / Left) with SMIL slide on click -->
         <g id="darkKnobGroup">
-          <circle cx="14" cy="13" r="10" fill="#0F172A" stroke="#22D3EE" stroke-width="1.8" filter="url(#glowSubtle)">
-            <animate attributeName="cx" values="14; 42" begin="click" dur="0.25s" fill="freeze" />
+          <circle cx="15" cy="14" r="11" fill="#0F172A" stroke="#22D3EE" stroke-width="2" filter="url(#glowSubtle)">
+            <animate attributeName="cx" values="15; 45" begin="click" dur="0.25s" fill="freeze" />
           </circle>
-          <!-- Active Crescent Moon Icon inside Knob -->
-          <g transform="translate(14, 13)">
-            <path d="M 2.2 -3.8 C 0.2 -3.8 -1.8 -2.2 -1.8 0 C -1.8 2.2 0.2 3.8 2.2 3.8 C 2.9 3.8 3.5 3.6 4.1 3.2 C 2.4 2.8 1.1 1.5 1.1 0 C 1.1 -1.5 2.4 -2.8 4.1 -3.2 C 3.5 -3.6 2.9 -3.8 2.2 -3.8 Z" fill="#22D3EE"/>
-            <animateTransform attributeName="transform" type="translate" values="14,13; 42,13" begin="click" dur="0.25s" fill="freeze" />
+          <g transform="translate(15, 14)">
+            <path d="M 2.4 -4.2 C 0.2 -4.2 -2 -2.4 -2 0 C -2 2.4 0.2 4.2 2.4 4.2 C 3.1 4.2 3.8 4 4.5 3.5 C 2.6 3.1 1.2 1.6 1.2 0 C 1.2 -1.6 2.6 -3.1 4.5 -3.5 C 3.8 -4 3.1 -4.2 2.4 -4.2 Z" fill="#22D3EE"/>
+            <animateTransform attributeName="transform" type="translate" values="15,14; 45,14" begin="click" dur="0.25s" fill="freeze" />
           </g>
         </g>
       </g>
     </a>
 
     <!-- Top Availability Badge -->
-    <g transform="translate(506, 88)">
-      <rect x="0" y="0" width="224" height="24" rx="12" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
-      <circle cx="12" cy="12" r="3.5" fill="#10B981">
+    <g transform="translate(540, 94)">
+      <rect x="0" y="0" width="254" height="30" rx="15" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+      <circle cx="15" cy="15" r="4.5" fill="#10B981">
         <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
       </circle>
-      <text x="24" y="15.5" class="font-sans" font-size="11.5" font-weight="700" fill="#34D399" letter-spacing="0.4">
+      <text x="30" y="20" class="font-sans" font-size="12" font-weight="700" fill="#10B981" letter-spacing="0.4">
         OPEN FOR AI &amp; ML OPPORTUNITIES
       </text>
     </g>
 
     <!-- Greeting & Hero Name -->
-    <text x="506" y="144" class="font-sans" font-size="26" font-weight="600" fill="#94A3B8">
+    <text x="540" y="156" class="font-sans" font-size="28" font-weight="600" fill="#94A3B8">
       Hi, <tspan fill="#FFFFFF">I'm</tspan>
     </text>
 
-    <text x="506" y="194" class="font-sans" font-size="46" font-weight="800" fill="url(#accentGrad)" letter-spacing="-0.8">
+    <text x="540" y="210" class="font-sans" font-size="52" font-weight="800" fill="url(#accentGrad)" letter-spacing="-0.8">
       Jaywardhan Yadav
     </text>
 
-        <!-- Animated Typing Terminal Prompt Box -->
-    <g transform="translate(506, 214)">
-      <rect x="0" y="0" width="614" height="48" rx="10" fill="rgba(15, 23, 42, 0.95)" stroke="rgba(34, 211, 238, 0.45)" stroke-width="1.6"/>
-      <!-- Terminal Prompt Symbol -->
-      <text x="14" y="30" class="font-mono" font-size="20" font-weight="800" fill="#22D3EE">❯</text>
+    <!-- Animated Typing Terminal Prompt Box (Enlarged to 54px!) -->
+    <g transform="translate(540, 234)">
+      <rect x="0" y="0" width="675" height="54" rx="12" fill="rgba(3, 7, 18, 0.8)" stroke="#22D3EE" stroke-width="1.6"/>
+      <text x="14" y="34.5" class="font-mono" font-size="22" font-weight="800" fill="#22D3EE">❯</text>
 
-      <!-- Phrase 1: AI & Machine Learning Engineer -->
       <g clip-path="url(#typeClip1)">
-        <text x="36" y="30" class="font-mono" font-size="18.5" font-weight="700" fill="#FFFFFF">
+        <text x="38" y="34.5" class="font-mono" font-size="20" font-weight="700" fill="#FFFFFF">
           AI &amp; Machine Learning Engineer
         </text>
       </g>
-
-      <!-- Phrase 2: Multi-Agent Systems Architect -->
       <g clip-path="url(#typeClip2)">
-        <text x="36" y="30" class="font-mono" font-size="18.5" font-weight="700" fill="#FFFFFF">
+        <text x="38" y="34.5" class="font-mono" font-size="20" font-weight="700" fill="#FFFFFF">
           Multi-Agent Systems Architect
         </text>
       </g>
-
-      <!-- Phrase 3: Data Scientist -->
       <g clip-path="url(#typeClip3)">
-        <text x="36" y="30" class="font-mono" font-size="18.5" font-weight="700" fill="#FFFFFF">
+        <text x="38" y="34.5" class="font-mono" font-size="20" font-weight="700" fill="#FFFFFF">
           Data Scientist
         </text>
       </g>
-
-      <!-- Phrase 4: Generative AI Engineer -->
       <g clip-path="url(#typeClip4)">
-        <text x="36" y="30" class="font-mono" font-size="18.5" font-weight="700" fill="#FFFFFF">
+        <text x="38" y="34.5" class="font-mono" font-size="20" font-weight="700" fill="#FFFFFF">
           Generative AI Engineer
         </text>
       </g>
-
-      <!-- Phrase 5: Production MLOps & Scalable API Developer -->
       <g clip-path="url(#typeClip5)">
-        <text x="36" y="30" class="font-mono" font-size="18.5" font-weight="700" fill="#FFFFFF">
+        <text x="38" y="34.5" class="font-mono" font-size="20" font-weight="700" fill="#FFFFFF">
           Production MLOps &amp; Scalable API Developer
         </text>
       </g>
 
-      <!-- Blinking Cursor that travels with typing -->
-      <rect y="12" width="10" height="24" rx="2" fill="#22D3EE" class="cursor-blink">
+      <rect y="13.5" width="11" height="27" rx="2" fill="#22D3EE" class="cursor-blink">
         <animate attributeName="x" 
           values="
-            36; 412; 412; 36;
-            36; 398; 398; 36;
-            36; 232; 232; 36;
-            36; 322; 322; 36;
-            36; 532; 532; 36;
-            36"
+            38; 443; 443; 38;
+            38; 428; 428; 38;
+            38; 248; 248; 38;
+            38; 348; 348; 38;
+            38; 573; 573; 38;
+            38"
           keyTimes="
             0; 0.06; 0.18; 0.195;
             0.20; 0.26; 0.38; 0.395;
@@ -539,247 +506,246 @@
       </rect>
     </g>
 
-        <!-- Sequentially Revealed Info Matrix Grid (2 Columns x 2 Rows) -->
-    <g transform="translate(506, 280)">
+    <!-- Info Matrix Grid (Enlarged to 14.5px!) -->
+    <g transform="translate(540, 314)">
       <!-- Row 1, Col 1: Email -->
       <g transform="translate(0, 0)">
-        <text x="0" y="14" class="font-mono" font-size="12" fill="#22D3EE">✉️ Email:</text>
-        <a href="mailto:jaywardhan.tech@gmail.com" xlink:href="mailto:jaywardhan.tech@gmail.com" target="_blank"><text x="100" y="14" class="font-sans" font-size="13" font-weight="500" fill="#FFFFFF">jaywardhan.tech@gmail.com</text></a>
+        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">✉️ Email:</text>
+        <a href="mailto:jaywardhan.tech@gmail.com" xlink:href="mailto:jaywardhan.tech@gmail.com" target="_blank"><text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">jaywardhan.tech@gmail.com</text></a>
       </g>
 
       <!-- Row 1, Col 2: Education -->
-      <g transform="translate(315, 0)">
-        <text x="0" y="14" class="font-mono" font-size="12" fill="#22D3EE">🎓 Education:</text>
-        <text x="100" y="14" class="font-sans" font-size="13" font-weight="500" fill="#FFFFFF">MSc in Data Science</text>
+      <g transform="translate(345, 0)">
+        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">🎓 Education:</text>
+        <text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">MSc in Data Science</text>
       </g>
 
       <!-- Row 2, Col 1: Location -->
-      <g transform="translate(0, 32)">
-        <text x="0" y="14" class="font-mono" font-size="12" fill="#22D3EE">📍 Location:</text>
-        <text x="100" y="14" class="font-sans" font-size="13" font-weight="500" fill="#FFFFFF">Pune, India • Remote</text>
+      <g transform="translate(0, 40)">
+        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">📍 Location:</text>
+        <text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">Pune, India • Remote</text>
       </g>
 
       <!-- Row 2, Col 2: Portfolio -->
-      <g transform="translate(315, 32)">
-        <text x="0" y="14" class="font-mono" font-size="12" fill="#22D3EE">💼 Portfolio:</text>
-        <a href="https://jaywardhanportfolio.netlify.app" xlink:href="https://jaywardhanportfolio.netlify.app" target="_blank"><text x="100" y="14" class="font-sans" font-size="13" font-weight="500" fill="#FFFFFF">jaywardhanportfolio.netlify.app</text></a>
+      <g transform="translate(345, 40)">
+        <text x="0" y="16" class="font-mono" font-size="13.5" font-weight="600" fill="#22D3EE">💼 Portfolio:</text>
+        <a href="https://jaywardhanportfolio.netlify.app" xlink:href="https://jaywardhanportfolio.netlify.app" target="_blank"><text x="110" y="16" class="font-sans" font-size="14.5" font-weight="600" fill="#FFFFFF">jaywardhanportfolio.netlify.app</text></a>
       </g>
     </g>
 
-        <!-- Skills Section: 4 Rows of Glowing Interactive Pills -->
-    <g transform="translate(506, 374)">
-      <text x="0" y="0" class="font-mono" font-size="11.5" font-weight="700" fill="#94A3B8" letter-spacing="1">
+    <!-- Skills Section: 4 Rows of Enlarged Glowing Interactive Pills (Height 38px, Font 14px bold!) -->
+    <g transform="translate(540, 412)">
+      <text x="0" y="0" class="font-mono" font-size="14" font-weight="800" fill="#94A3B8" letter-spacing="1">
         // CORE CAPABILITIES &amp; TECH STACK
       </text>
 
       <!-- Row 1 -->
-      <g transform="translate(0, 14)">
+      <g transform="translate(0, 20)">
         <!-- Pill: Python -->
         <g transform="translate(0, 0)" class="interactive-pill">
-          <rect width="76" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#3B82F6"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Python</text>
+          <rect width="96" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#3B82F6"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Python</text>
         </g>
         <!-- Pill: LangChain -->
-        <g transform="translate(84, 0)" class="interactive-pill">
-          <rect width="96" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#10B981"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">LangChain</text>
+        <g transform="translate(106, 0)" class="interactive-pill">
+          <rect width="122" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#10B981"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">LangChain</text>
         </g>
         <!-- Pill: LangGraph -->
-        <g transform="translate(188, 0)" class="interactive-pill">
-          <rect width="96" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#8B5CF6"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">LangGraph</text>
+        <g transform="translate(238, 0)" class="interactive-pill">
+          <rect width="122" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#8B5CF6"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">LangGraph</text>
         </g>
         <!-- Pill: Agentic AI -->
-        <g transform="translate(292, 0)" class="interactive-pill">
-          <rect width="98" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#F59E0B"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Agentic AI</text>
+        <g transform="translate(370, 0)" class="interactive-pill">
+          <rect width="128" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#F59E0B"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Agentic AI</text>
         </g>
         <!-- Pill: CrewAI -->
-        <g transform="translate(398, 0)" class="interactive-pill">
-          <rect width="78" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#EC4899"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">CrewAI</text>
+        <g transform="translate(508, 0)" class="interactive-pill">
+          <rect width="100" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#EC4899"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">CrewAI</text>
         </g>
       </g>
 
       <!-- Row 2 -->
-      <g transform="translate(0, 48)">
+      <g transform="translate(0, 68)">
         <!-- Pill: PyTorch -->
         <g transform="translate(0, 0)" class="interactive-pill">
-          <rect width="84" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#EE4C2C"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">PyTorch</text>
+          <rect width="106" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#EE4C2C"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">PyTorch</text>
         </g>
         <!-- Pill: Hugging Face -->
-        <g transform="translate(92, 0)" class="interactive-pill">
-          <rect width="112" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#FFD21E"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Hugging Face</text>
+        <g transform="translate(116, 0)" class="interactive-pill">
+          <rect width="140" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#FFD21E"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Hugging Face</text>
         </g>
         <!-- Pill: RAG / VectorDB -->
-        <g transform="translate(212, 0)" class="interactive-pill">
-          <rect width="126" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#06B6D4"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">RAG / VectorDB</text>
+        <g transform="translate(266, 0)" class="interactive-pill">
+          <rect width="160" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#06B6D4"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">RAG / VectorDB</text>
         </g>
         <!-- Pill: MLflow -->
-        <g transform="translate(346, 0)" class="interactive-pill">
-          <rect width="80" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#0194E2"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">MLflow</text>
+        <g transform="translate(436, 0)" class="interactive-pill">
+          <rect width="102" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#0194E2"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">MLflow</text>
         </g>
         <!-- Pill: System Design -->
-        <g transform="translate(434, 0)" class="interactive-pill">
-          <rect width="114" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#A855F7"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">System Design</text>
+        <g transform="translate(548, 0)" class="interactive-pill">
+          <rect width="146" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#A855F7"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">System Design</text>
         </g>
       </g>
 
       <!-- Row 3 -->
-      <g transform="translate(0, 82)">
+      <g transform="translate(0, 116)">
         <!-- Pill: FastAPI -->
         <g transform="translate(0, 0)" class="interactive-pill">
-          <rect width="80" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#009688"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">FastAPI</text>
+          <rect width="102" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#009688"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">FastAPI</text>
         </g>
         <!-- Pill: REST APIs -->
-        <g transform="translate(88, 0)" class="interactive-pill">
-          <rect width="92" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#10B981"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">REST APIs</text>
+        <g transform="translate(112, 0)" class="interactive-pill">
+          <rect width="118" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#10B981"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">REST APIs</text>
         </g>
         <!-- Pill: Pydantic -->
-        <g transform="translate(188, 0)" class="interactive-pill">
-          <rect width="86" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#E92063"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Pydantic</text>
+        <g transform="translate(240, 0)" class="interactive-pill">
+          <rect width="110" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#E92063"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Pydantic</text>
         </g>
         <!-- Pill: Redis -->
-        <g transform="translate(282, 0)" class="interactive-pill">
-          <rect width="72" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#DC2626"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Redis</text>
+        <g transform="translate(360, 0)" class="interactive-pill">
+          <rect width="88" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#DC2626"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Redis</text>
         </g>
         <!-- Pill: PostgreSQL -->
-        <g transform="translate(362, 0)" class="interactive-pill">
-          <rect width="102" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#336791"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">PostgreSQL</text>
+        <g transform="translate(458, 0)" class="interactive-pill">
+          <rect width="128" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#336791"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">PostgreSQL</text>
         </g>
         <!-- Pill: MLOps -->
-        <g transform="translate(472, 0)" class="interactive-pill">
-          <rect width="78" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#00D2B4"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">MLOps</text>
+        <g transform="translate(596, 0)" class="interactive-pill">
+          <rect width="96" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#00D2B4"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">MLOps</text>
         </g>
       </g>
 
       <!-- Row 4 -->
-      <g transform="translate(0, 116)">
+      <g transform="translate(0, 164)">
         <!-- Pill: Docker -->
         <g transform="translate(0, 0)" class="interactive-pill">
-          <rect width="78" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#2496ED"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Docker</text>
+          <rect width="98" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#2496ED"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Docker</text>
         </g>
         <!-- Pill: AWS -->
-        <g transform="translate(86, 0)" class="interactive-pill">
-          <rect width="62" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#FF9900"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">AWS</text>
+        <g transform="translate(108, 0)" class="interactive-pill">
+          <rect width="80" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#FF9900"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">AWS</text>
         </g>
         <!-- Pill: DVC -->
-        <g transform="translate(156, 0)" class="interactive-pill">
-          <rect width="62" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#945DD6"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">DVC</text>
+        <g transform="translate(198, 0)" class="interactive-pill">
+          <rect width="80" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#945DD6"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">DVC</text>
         </g>
         <!-- Pill: DagsHub -->
-        <g transform="translate(226, 0)" class="interactive-pill">
-          <rect width="88" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#1565C0"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">DagsHub</text>
+        <g transform="translate(288, 0)" class="interactive-pill">
+          <rect width="114" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#1565C0"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">DagsHub</text>
         </g>
         <!-- Pill: CI/CD -->
-        <g transform="translate(322, 0)" class="interactive-pill">
-          <rect width="72" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#06B6D4"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">CI/CD</text>
+        <g transform="translate(412, 0)" class="interactive-pill">
+          <rect width="92" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#06B6D4"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">CI/CD</text>
         </g>
         <!-- Pill: Git -->
-        <g transform="translate(402, 0)" class="interactive-pill">
-          <rect width="60" height="27" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-          <circle cx="12" cy="13.5" r="3.8" fill="#F05032"/>
-          <text x="22" y="17.5" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0">Git</text>
+        <g transform="translate(514, 0)" class="interactive-pill">
+          <rect width="76" height="38" rx="9" fill="rgba(15, 23, 42, 0.88)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.2"/>
+          <circle cx="17" cy="19" r="4.8" fill="#F05032"/>
+          <text x="30" y="24" class="font-mono" font-size="14" font-weight="700" fill="#FFFFFF">Git</text>
         </g>
       </g>
     </g>
 
     <!-- Bottom Separator Divider -->
-    <line x1="506" y1="552" x2="1120" y2="552" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
+    <line x1="540" y1="630" x2="1215" y2="630" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
 
-        <!-- Bottom Social Links Bar -->
-    <g transform="translate(506, 570)">
+    <!-- Bottom Social Links Bar (Enlarged to 44px height, 14px text!) -->
+    <g transform="translate(540, 648)">
       <!-- GitHub Button -->
       <a href="https://github.com/JaywardhanYadav" xlink:href="https://github.com/JaywardhanYadav" target="_blank">
-                <g transform="translate(0, 0)" class="social-link">
-          <rect width="112" height="36" rx="9" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-          <!-- Official GitHub Octocat Icon -->
-          <svg x="12" y="9" width="16" height="16" viewBox="0 0 16 16" fill="#CBD5E1">
+        <g transform="translate(0, 0)" class="social-link">
+          <rect width="126" height="44" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+          <svg x="14" y="13" width="18" height="18" viewBox="0 0 16 16" fill="#CBD5E1">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
           </svg>
-          <text x="35" y="21.5" class="font-sans" font-size="12.5" font-weight="600" fill="#CBD5E1">GitHub</text>
+          <text x="40" y="27.5" class="font-sans" font-size="14" font-weight="700" fill="#CBD5E1">GitHub</text>
         </g>
       </a>
 
       <!-- LinkedIn Button -->
       <a href="https://www.linkedin.com/in/jaywardhanyadav/" xlink:href="https://www.linkedin.com/in/jaywardhanyadav/" target="_blank">
-        <g transform="translate(122, 0)" class="social-link">
-          <rect width="118" height="36" rx="9" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-          <g transform="translate(12, 10)">
-            <rect x="0" y="4" width="3" height="10" fill="#0A66C2" rx="0.5"/>
-            <circle cx="1.5" cy="1.5" r="1.5" fill="#0A66C2"/>
-            <path d="M5 4h2.8v1.4h.04c.39-.74 1.35-1.52 2.78-1.52 2.97 0 3.52 1.96 3.52 4.5V14H11.3V9.8c0-1-.02-2.28-1.39-2.28-1.4 0-1.61 1.09-1.61 2.21V14H5.5V4z" fill="#0A66C2"/>
+        <g transform="translate(138, 0)" class="social-link">
+          <rect width="134" height="44" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+          <g transform="translate(14, 13)">
+            <rect x="0" y="4" width="3.5" height="11" fill="#0A66C2" rx="0.5"/>
+            <circle cx="1.75" cy="1.5" r="1.75" fill="#0A66C2"/>
+            <path d="M5.5 4h3v1.5h.05c.42-.8 1.5-1.6 3-1.6 3.2 0 3.8 2.1 3.8 4.8V15h-3.2v-4.5c0-1.1-.02-2.5-1.5-2.5-1.5 0-1.8 1.2-1.8 2.4V15H5.5V4z" fill="#0A66C2"/>
           </g>
-          <text x="34" y="21.5" class="font-sans" font-size="12.5" font-weight="600" fill="#CBD5E1">LinkedIn</text>
+          <text x="40" y="27.5" class="font-sans" font-size="14" font-weight="700" fill="#CBD5E1">LinkedIn</text>
         </g>
       </a>
 
       <!-- Portfolio Button -->
       <a href="https://jaywardhanportfolio.netlify.app" xlink:href="https://jaywardhanportfolio.netlify.app" target="_blank">
-        <g transform="translate(250, 0)" class="social-link">
-          <rect width="120" height="36" rx="9" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-          <g transform="translate(12, 9)" stroke="#22D3EE" stroke-width="1.3" fill="none">
-            <circle cx="7" cy="8" r="6.5"/>
-            <ellipse cx="7" cy="8" rx="3" ry="6.5"/>
-            <line x1="0.5" y1="8" x2="13.5" y2="8"/>
+        <g transform="translate(284, 0)" class="social-link">
+          <rect width="136" height="44" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+          <g transform="translate(14, 13)" stroke="#22D3EE" stroke-width="1.4" fill="none">
+            <circle cx="8" cy="8" r="7.5"/>
+            <ellipse cx="8" cy="8" rx="3.2" ry="7.5"/>
+            <line x1="0.5" y1="8" x2="15.5" y2="8"/>
           </g>
-          <text x="34" y="21.5" class="font-sans" font-size="12.5" font-weight="600" fill="#CBD5E1">Portfolio</text>
+          <text x="40" y="27.5" class="font-sans" font-size="14" font-weight="700" fill="#CBD5E1">Portfolio</text>
         </g>
       </a>
 
       <!-- Email Button -->
       <a href="mailto:jaywardhan.tech@gmail.com" xlink:href="mailto:jaywardhan.tech@gmail.com" target="_blank">
-        <g transform="translate(380, 0)" class="social-link">
-          <rect width="108" height="36" rx="9" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1"/>
-          <g transform="translate(12, 10)" stroke="#EF4444" stroke-width="1.3" fill="none">
-            <rect x="0" y="0" width="15" height="11" rx="1.5"/>
-            <path d="M0 1.5l7.5 5 7.5-5"/>
+        <g transform="translate(432, 0)" class="social-link">
+          <rect width="124" height="44" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+          <g transform="translate(14, 14)" stroke="#EF4444" stroke-width="1.4" fill="none">
+            <rect x="0" y="0" width="17" height="12.5" rx="1.5"/>
+            <path d="M0 1.5l8.5 6 8.5-6"/>
           </g>
-          <text x="34" y="21.5" class="font-sans" font-size="12.5" font-weight="600" fill="#CBD5E1">Email</text>
+          <text x="39" y="27.5" class="font-sans" font-size="14" font-weight="700" fill="#CBD5E1">Email</text>
         </g>
       </a>
 
       <!-- Right Status Cluster -->
-      <g transform="translate(535, 10)">
-        <circle cx="0" cy="7" r="4" fill="#10B981" class="beacon-pulse"/>
-        <text x="10" y="11" class="font-mono" font-size="11.5" font-weight="700" fill="#10B981">Available</text>
+      <g transform="translate(595, 15)">
+        <circle cx="0" cy="7" r="5" fill="#10B981" class="beacon-pulse"/>
+        <text x="13" y="12" class="font-mono" font-size="13.5" font-weight="800" fill="#10B981">Available</text>
       </g>
     </g>
   </g>

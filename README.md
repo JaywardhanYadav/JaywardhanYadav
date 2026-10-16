@@ -8,15 +8,58 @@
 
 ---
 
-##  About Me
+## 👨‍💻 About Me
 
-I am an **AI & Machine Learning Engineer** passionate about building robust, scalable, and intelligent production systems. My work centers on architecting autonomous **Multi-Agent workflows (LangGraph & CrewAI)**, developing high-precision **Retrieval-Augmented Generation (RAG)** systems, and training deep learning models with PyTorch. Backed by solid foundations in backend engineering and MLOps, I specialize in translating experimental AI research into high-throughput, containerized microservices deployed with FastAPI, Docker, and MLflow. I am dedicated to bridging the gap between cutting-edge LLMs and reliable, sub-second latency production applications.
+I am an **AI & Machine Learning Engineer** passionate about architecting autonomous **Multi-Agent Orchestration Platforms (LangGraph, MCP)**, high-precision **Retrieval-Augmented Generation (RAG)** systems, and scalable production MLOps pipelines. Backed by solid foundations in distributed backend engineering and low-latency microservices (FastAPI, PostgreSQL, Redis, Docker), I specialize in turning complex LLM workflows into deterministic, budget-reconciled, and benchmark-verified enterprise applications with measurable business impact.
 
 ---
 
-##  Flagship AI Engineering Projects
+## 🚀 Flagship AI Engineering Projects
 
-### ⚖️ 1. [LegalDrishti AI](https://github.com/JaywardhanYadav/LegalDrishti-AI) — Two-Stage RAG Legal Intelligence & Document Research Platform
+### ✈️ 1. [PlanMyTrip AI](https://github.com/JaywardhanYadav/PlanMyTrip-AI) — Enterprise Multi-Agent Travel Orchestration Platform
+> *An enterprise-grade multi-agent orchestration engine built with **LangGraph**, **FastAPI**, **PostgreSQL 16**, **Redis 7**, and the **Model Context Protocol (MCP)**—delivering 2-stage parallel domain fan-out, live travel API tool calls, deterministic financial reconciliation, and real-time SSE progress telemetry.*
+
+```
+                     ┌──────────────────────────────────────────────┐
+                     │    User Intake & Supervisor (HITL / SSE)     │
+                     │          (LangGraph State Machine)           │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+               ┌────────────────────────────┴───────────────────────────┐
+               ▼ (Stage 1: Parallel Fan-Out via asyncio.gather)         ▼ (Stage 2: Spatial Anchor)
+    ┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐
+    │     FlightAgent     │   │     PlacesAgent     │   │     HotelAgent      │
+    │  (Live Schedules)   │   │  (Daytime Clusters) │   │ (Base Stay & Dining)│
+    └──────────┬──────────┘   └──────────┬──────────┘   └──────────┬──────────┘
+               │                         │                         │
+               └─────────────────────────┼─────────────────────────┘
+                                         ▼
+                     ┌───────────────────────────────────────┐
+                     │   Model Context Protocol (MCP) Hub    │
+                     │  (FlightAPI • SerpApi • Open-Meteo)   │
+                     └───────────────────┬───────────────────┘
+                                         ▼
+                     ┌───────────────────────────────────────┐
+                     │ N-Day Output Guardrail & Verification │
+                     │   (Decimal.Decimal Budget Engine)     │
+                     └───────────────────────────────────────┘
+```
+
+- **Two-Stage Multi-Agent Orchestration (LangGraph):** Executes an asynchronous 2-stage graph avoiding naive single-prompt bottlenecks. Stage 1 triggers parallel domain fan-out (`FlightAgent`, `PlacesAgent`, `DayPlannerAgent` via `asyncio.gather`), extracting daytime activity hubs to feed Stage 2 (`HotelAgent`) for spatially anchored base stays and curated dining.
+- **Single-Base Stay Continuity & N-Day Verification Guardrail:** Implements an automated luggage-free base hotel strategy for intermediate nights (Days 2 to $N-1$) with Day $N$ concierge baggage hold. A post-generation verification loop mathematically enforces inclusive calendar math ($D_{end} = D_{start} + N - 1$), complete $N$-day continuity, and grounded hotel rates.
+- **Deterministic Budget Reconciliation (Zero Float Drift):** Built with Python `decimal.Decimal` and ISO-4217 tracking, eliminating floating-point rounding errors and strictly reconciling multi-tier budgets (Budget, Moderate, Luxury) against hard ceilings ($Total \le Budget_{max}$).
+- **Decoupled MCP Microservice Topology:** Interfaces worker agents with 3 standalone **Model Context Protocol (MCP)** servers (`FlightAPI.io`, `SerpApi Google Hotels`, `Open-Meteo`, and `Tavily`) backed by Redis 7 caching and credit-safe rate limiting.
+- **Enterprise Benchmark Metrics & Unit Economics:** Evaluated via an automated 4-dimensional benchmark suite ([evaluations/](https://github.com/JaywardhanYadav/PlanMyTrip-AI/blob/main/evaluations)) achieving a **96.2% Composite Production Score**:
+  - **96.0% Adversarial Safety & Jailbreak Defense** (24/25 injection attacks blocked).
+  - **96.8% Budget Compliance** & **95.5% Structural Quality** across complex multi-day circuits.
+  - **11.4s p50 Latency (18.2s p95)** across parallel distributed MCP tool calls.
+  - **~$0.018 (~₹1.50 INR) Cost / Trip:** Token-optimized with strict context pruning on `gpt-4o-mini` (55,000+ comprehensive multi-day itineraries per $1,000 LLM spend).
+- **Human-in-the-Loop (HITL) Checkpoints & Security:** Persists interactive state checkpoints via PostgreSQL 16 `AsyncPostgresSaver` with authenticated JWT thread ownership and real-time Server-Sent Events (SSE) telemetry.
+- **Tech Stack:** `Python 3.12` • `LangGraph` • `FastAPI` • `Model Context Protocol (MCP)` • `PostgreSQL 16` • `Redis 7` • `Docker Compose` • `Server-Sent Events (SSE)` • `SerpApi` • `FlightAPI.io` • `Tavily`
+
+---
+
+### ⚖️ 2. [LegalDrishti AI](https://github.com/JaywardhanYadav/LegalDrishti-AI) — Two-Stage RAG Legal Intelligence & Document Research Platform
 > *An enterprise-grade legal intelligence and consultation platform engineered for the Indian legal system (BNS, BNSS, BSA 2023) using a high-precision Two-Stage RAG pipeline backed by OpenAI and Weaviate.*
 
 ```
@@ -35,38 +78,6 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 - **Cross-Encoder Reranking (`FlashRank`):** Filters raw candidate pools (top-20) down to top-5 precision chunks, boosting **MRR@5 from 0.384 to 0.762 (+98.4%)** and achieving **86.8% Hit Rate @ 5** at **~68ms latency**.
 - **Dual-Stream Context Synthesis:** Concurrently contextualizes codified statutes alongside private client evidence in **GPT-4o** with strict citation traceability (Act, Section, Page number).
 - **Tech Stack:** `Python 3.12` • `FastAPI` • `OpenAI GPT-4o / Embeddings` • `Weaviate (HNSW)` • `PostgreSQL 17` • `Docker` • `Streamlit`
-
----
-
-### 🗺️ 2. [PlanMyTrip AI](https://github.com/JaywardhanYadav/PlanMyTrip-AI) — Autonomous Multi-Agent Travel Planner & Budget Engine
-> *A collaborative, state-machine driven multi-agent travel architecture leveraging **Model Context Protocol (MCP)** to orchestrate real-time modular APIs, strict budget constraints, and hallucination-free itinerary drafts.*
-
-```
-                     ┌─────────────────────────────┐
-                     │   Orchestrator Supervisor   │
-                     │  (LangGraph State Machine)  │
-                     └──────────────┬──────────────┘
-                                    │
-         ┌──────────────────────────┼──────────────────────────┐
-         ▼                          ▼                          ▼
-┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
-│ Itinerary & Cult │      │ Budget & Expense │      │  Logistics & Geo │
-│ Specialist Agent │      │ Calculator Agent │      │ Specialist Agent │
-└────────┬─────────┘      └────────┬─────────┘      └────────┬─────────┘
-         │                         │                         │
-         └─────────────────────────┼─────────────────────────┘
-                                   ▼
-              ┌──────────────────────────────────────────┐
-              │     Model Context Protocol (MCP) Hub     │
-              │  (Tavily • OpenWeather • Flights/Hotels) │
-              └──────────────────────────────────────────┘
-```
-
-- **Hierarchical LangGraph Orchestration:** Coordinates multi-turn state transitions between specialized worker agents with conditional dispatch, loop validation, and persistent thread memory.
-- **Model Context Protocol (MCP) Server Hub:** Interfaces worker agents with modular, standardized MCP tool servers to query live flight, accommodation, geocoding, and local weather APIs without context clutter.
-- **Deterministic Budget & Cost Optimization:** Calculates exact total travel expenses across accommodation, transit, and daily allowances, enforcing hard mathematical ceiling constraints to eliminate financial hallucinations.
-- **End-to-End Itinerary Synthesis:** Produces a comprehensive, actionable travel dossier complete with hour-by-hour schedules, verified transit times, and localized recommendations.
-- **Tech Stack:** `Python 3.12` • `LangGraph` • `Model Context Protocol (MCP)` • `FastAPI` • `Pydantic v2` • `LangChain` • `Tavily API` • `Docker`
 
 ---
 
@@ -101,13 +112,12 @@ I am an **AI & Machine Learning Engineer** passionate about building robust, sca
 
 | Domain | Technologies & Frameworks |
 | :--- | :--- |
-| **Agentic & Generative AI** | `Agentic AI` • `LangGraph` • `LangChain` • `CrewAI` • `RAG (Dense/Sparse)` • `Function Calling` • `Prompt Engineering` |
+| **Agentic & Generative AI** | `Agentic AI` • `LangGraph` • `Model Context Protocol (MCP)` • `LangChain` • `CrewAI` • `RAG (Dense/Sparse)` • `Function Calling` • `Prompt Engineering` |
 | **LLMs & Embedding Models** | `OpenAI GPT-4o` • `Claude 3.7` • `DeepSeek-R1` • `Hugging Face Transformers` • `Sentence-Transformers` • `Ollama` |
 | **Vector Stores & Databases** | `Qdrant` • `Pinecone` • `ChromaDB` • `PostgreSQL (pgvector)` • `Redis` • `SQLite` |
 | **Machine Learning & Core** | `Python` • `PyTorch` • `Scikit-Learn` • `NumPy` • `Pandas` • `NLP` • `Feature Engineering` |
 | **Backend & Architecture** | `FastAPI` • `REST APIs` • `Pydantic` • `System Design` • `AsyncIO` • `Microservices` |
 | **MLOps & Infrastructure** | `Docker` • `AWS (EC2, S3)` • `DVC` • `DagsHub` • `MLflow` • `CI/CD Pipelines` • `Git` • `Linux` |
-
 </div>
 
 <br/>

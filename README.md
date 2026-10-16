@@ -91,11 +91,10 @@ I am an **AI & Machine Learning Engineer** passionate about architecting autonom
                                                      └────────────────────────┘
 ```
 
-- **Ensemble Modeling & Optimization:** Blends **XGBoost** and **LightGBM** regressors optimized via **Optuna** to predict risk-adjusted premiums with automated validation scoring.
-- **Experiment Tracking & Model Registry:** Centrally versions hyperparameters, clinical feature pipelines, and serialized model artifacts powered by **MLflow**.
-- **Automated Data Drift Detection:** Employs **Evidently AI** to continuously evaluate live inference payloads against parquet reference baselines, logging statistical drift alerts into **MSSQL**.
-- **Multi-Container Orchestration:** Fully containerized with **Docker Compose**, seamlessly orchestrating FastAPI inference, Streamlit dashboard, MSSQL database, and scheduled drift monitoring jobs.
-- **Tech Stack:** `Python 3.12` • `FastAPI` • `MLflow` • `Docker Compose` • `Evidently AI` • `MSSQL` • `XGBoost` • `LightGBM` • `DVC` • `Streamlit`
+- **Ensemble Modeling & Clinical Feature Engineering:** Blends **XGBoost** and **LightGBM** regressors with clinical feature transformations (blood pressure extraction, smoker-obesity interactions), fine-tuned via **Optuna** hyperparameter optimization.
+- **MLflow Model Registry & Automated Drift Detection:** Centrally tracks hyperparameter runs and model artifacts in **MLflow**, continuously auditing production inference logs against parquet baselines with **Evidently AI** for statistical data/concept drift.
+- **Multi-Container Microservices & Production Storage:** Fully containerized via **Docker Compose**, orchestrating **FastAPI** inference serving, an interactive **Streamlit** dashboard, and **MSSQL Server** persistence with AWS ECS/Fargate deployment readiness.
+- **Tech Stack:** `Python 3.12` • `FastAPI` • `MLflow` • `Docker Compose` • `Evidently AI` • `MSSQL` • `XGBoost` • `LightGBM` • `DVC` • `Streamlit` • `AWS (ECS/ECR)`
 
 ---
 

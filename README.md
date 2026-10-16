@@ -45,17 +45,10 @@ I am an **AI & Machine Learning Engineer** passionate about architecting autonom
                      └───────────────────────────────────────┘
 ```
 
-- **Two-Stage Multi-Agent Orchestration (LangGraph):** Executes an asynchronous 2-stage graph avoiding naive single-prompt bottlenecks. Stage 1 triggers parallel domain fan-out (`FlightAgent`, `PlacesAgent`, `DayPlannerAgent` via `asyncio.gather`), extracting daytime activity hubs to feed Stage 2 (`HotelAgent`) for spatially anchored base stays and curated dining.
-- **Single-Base Stay Continuity & N-Day Verification Guardrail:** Implements an automated luggage-free base hotel strategy for intermediate nights (Days 2 to $N-1$) with Day $N$ concierge baggage hold. A post-generation verification loop mathematically enforces inclusive calendar math ($D_{end} = D_{start} + N - 1$), complete $N$-day continuity, and grounded hotel rates.
-- **Deterministic Budget Reconciliation (Zero Float Drift):** Built with Python `decimal.Decimal` and ISO-4217 tracking, eliminating floating-point rounding errors and strictly reconciling multi-tier budgets (Budget, Moderate, Luxury) against hard ceilings ($Total \le Budget_{max}$).
-- **Decoupled MCP Microservice Topology:** Interfaces worker agents with 3 standalone **Model Context Protocol (MCP)** servers (`FlightAPI.io`, `SerpApi Google Hotels`, `Open-Meteo`, and `Tavily`) backed by Redis 7 caching and credit-safe rate limiting.
-- **Enterprise Benchmark Metrics & Unit Economics:** Evaluated via an automated 4-dimensional benchmark suite ([evaluations/](https://github.com/JaywardhanYadav/PlanMyTrip-AI/blob/main/evaluations)) achieving a **96.2% Composite Production Score**:
-  - **96.0% Adversarial Safety & Jailbreak Defense** (24/25 injection attacks blocked).
-  - **96.8% Budget Compliance** & **95.5% Structural Quality** across complex multi-day circuits.
-  - **11.4s p50 Latency (18.2s p95)** across parallel distributed MCP tool calls.
-  - **~$0.018 (~₹1.50 INR) Cost / Trip:** Token-optimized with strict context pruning on `gpt-4o-mini` (55,000+ comprehensive multi-day itineraries per $1,000 LLM spend).
-- **Human-in-the-Loop (HITL) Checkpoints & Security:** Persists interactive state checkpoints via PostgreSQL 16 `AsyncPostgresSaver` with authenticated JWT thread ownership and real-time Server-Sent Events (SSE) telemetry.
-- **Tech Stack:** `Python 3.12` • `LangGraph` • `FastAPI` • `Model Context Protocol (MCP)` • `PostgreSQL 16` • `Redis 7` • `Docker Compose` • `Server-Sent Events (SSE)` • `SerpApi` • `FlightAPI.io` • `Tavily`
+- **Two-Stage Multi-Agent Orchestration & MCP Hub:** Coordinates a 2-stage LangGraph state machine with parallel domain fan-out (`FlightAgent`, `PlacesAgent`, `DayPlannerAgent` in `asyncio.gather`) across 3 dedicated **Model Context Protocol (MCP)** tool servers, spatially anchoring base stays and dining to daytime activity hubs.
+- **Deterministic Budget Engine & N-Day Verification:** Enforces exact monetary reconciliation using Python `decimal.Decimal` (zero float drift) across tiered budgets ($Total \le Budget_{max}$), backed by an automated post-generation guardrail ensuring inclusive calendar math ($D_{end} = D_{start} + N - 1$) and luggage-free single-base stay continuity.
+- **Production Benchmarks & Scalable Economics:** Validated via an automated evaluation suite achieving a **96.2% Composite Score** (**96.0%** jailbreak defense, **96.8%** budget compliance, **11.4s p50** latency), with token-pruned LLM inference costing just **~$0.018 (~₹1.50 INR) / trip** (~55,000 itineraries per $1,000 spend).
+- **Tech Stack:** `Python 3.12` • `LangGraph` • `Model Context Protocol (MCP)` • `FastAPI` • `PostgreSQL 16` • `Redis 7` • `Docker Compose` • `Server-Sent Events (SSE)` • `SerpApi` • `FlightAPI.io`
 
 ---
 

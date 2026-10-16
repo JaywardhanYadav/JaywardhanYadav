@@ -67,10 +67,10 @@ I am an **AI & Machine Learning Engineer** passionate about architecting autonom
 └──────────────────┘     └─────────────────────┘     └────────────────────────┘
 ```
 
-- **Two-Stage Hybrid Retrieval:** Integrates an upstream **Statute Router (Regex + Weighted N-Grams)** with **Weaviate Hybrid Search** ($\alpha=0.5$ dense vectors + BM25) to isolate relevant statutory codes before vector retrieval.
-- **Cross-Encoder Reranking (`FlashRank`):** Filters raw candidate pools (top-20) down to top-5 precision chunks, boosting **MRR@5 from 0.384 to 0.762 (+98.4%)** and achieving **86.8% Hit Rate @ 5** at **~68ms latency**.
-- **Dual-Stream Context Synthesis:** Concurrently contextualizes codified statutes alongside private client evidence in **GPT-4o** with strict citation traceability (Act, Section, Page number).
-- **Tech Stack:** `Python 3.12` • `FastAPI` • `OpenAI GPT-4o / Embeddings` • `Weaviate (HNSW)` • `PostgreSQL 17` • `Docker` • `Streamlit`
+- **Two-Stage Hybrid Retrieval & Cross-Encoder Reranking (`FlashRank`):** Combines an upstream **Statute Router** (handling legacy IPC/CrPC transitions to BNS/BNSS 2023) with **Weaviate Hybrid Search** ($\alpha=0.5$ Dense + BM25) and `FlashRank` Cross-Encoder reranking—isolating top-5 precision chunks in **~68ms**.
+- **Empirical Benchmarks & Hallucination Defense (Ragas):** Evaluated across 75 golden legal query scenarios: boosted **MRR@5 from 0.384 to 0.762 (+98.4%)** with an **86.8% Hit Rate @ 5**, achieving **88.4% Faithfulness** (hallucination resistance) and **84.2% Context Precision** on the Ragas framework.
+- **Dual-Stream Grounding & Privacy-Centric Vaults:** Concurrently synthesizes governing statutory law alongside private client case files (FIRs, contracts, memos) with strict section and PDF page traceability, backed by persistent PostgreSQL 17 vaults and auto-cascading ephemeral file purging.
+- **Tech Stack:** `Python 3.12` • `FastAPI` • `OpenAI GPT-4o / Embeddings` • `Weaviate 1.38 (HNSW)` • `FlashRank` • `PostgreSQL 17` • `Redis 7` • `Docker Compose`
 
 ---
 
